@@ -133,7 +133,7 @@ libengine.a
 
 # For CocoaPods
 Pods/
-Solar.xcworkspace/
+BAOStudy.xcworkspace/
 !Podfile.lock
 
 # For Carthage

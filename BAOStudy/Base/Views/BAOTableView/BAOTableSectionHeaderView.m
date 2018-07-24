@@ -10,6 +10,28 @@
 
 @implementation BAOTableSectionHeaderView
 
++ (instancetype)reusableHeaderWithTableView:(UITableView *)tableView
+                            reuseIdentifier:(NSString *)reuseIdentifier {
+    id header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:reuseIdentifier];
+    if (header == nil) {
+        header = [[self alloc] initWithReuseIdentifier:reuseIdentifier];
+    }
+    return header;
+}
 
+#pragma mark - Public Methods
+
++ (CGFloat)headerHeight {
+    NSAssert(NO, @"Need to override");
+    return 0;
+}
+
++ (CGFloat)headerHeightWithViewModel:(BAOTableSectionHeaderViewModel *)viewModel {
+    return [self headerHeight];
+}
+
+- (void)bindDataWithViewModel:(BAOTableSectionHeaderViewModel *)viewModel {
+    NSAssert(NO, @"Need to override");
+}
 
 @end

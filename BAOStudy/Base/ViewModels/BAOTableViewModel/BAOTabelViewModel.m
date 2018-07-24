@@ -10,4 +10,28 @@
 
 @implementation BAOTabelViewModel
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.sectionViewModels = [NSMutableArray array];
+    }
+    return self;
+}
+
+- (BAOTableSectionViewModel *)sectionViewModelWithIndex:(NSInteger)index {
+    if (index >= self.sectionViewModels.count) {
+        return nil;
+    }
+    return self.sectionViewModels[index];
+}
+
+- (BAOTableCellViewModel *)cellViewModelWithIndexPath:(NSIndexPath *)indexPath {
+    BAOTableCellViewModel *cellViewModel = nil;
+    BAOTableSectionViewModel *sectionViewModel = [self sectionViewModelWithIndex:indexPath.section];
+    if (indexPath.row < sectionViewModel.cellViewModels.count) {
+        cellViewModel = sectionViewModel.cellViewModels[indexPath.row];
+    }
+    return cellViewModel;
+}
+
 @end

@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+@class BAOTableViewCell;
+
 @interface BAOTableCellViewModel : NSObject
+
+/// 默认为 BAOTableViewCell
+@property (nonatomic, strong) Class cellClass;
+
+@property (nonatomic, assign) NSInteger cellId;
+
+@property (nonatomic, assign) CGFloat cellHeight;
+
+/// 默认为 BAOTableViewCellSeparatorTypeDefault
+@property (nonatomic, assign) BAOTableViewCellSeparatorType separatorType;
+
+- (BAOTableViewCell *)reusableCellWithTableView:(UITableView *)tableView;
 
 @end

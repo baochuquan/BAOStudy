@@ -10,4 +10,6 @@
 
 @interface BAOTableFooterViewModel : NSObject
 
+@property (nonatomic, assign) CGFloat footerHeight;
+
 @end

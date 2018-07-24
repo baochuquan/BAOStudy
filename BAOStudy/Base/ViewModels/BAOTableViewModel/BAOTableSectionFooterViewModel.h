@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class BAOTableSectionFooterView;
+
 @interface BAOTableSectionFooterViewModel : NSObject
+
+@property (nonatomic, strong) Class sectionClass;
+
+@property (nonatomic, assign) CGFloat footerHeight;
+
+- (BAOTableSectionFooterView *)reusableFooterWithTableView:(UITableView *)tableView;
 
 @end

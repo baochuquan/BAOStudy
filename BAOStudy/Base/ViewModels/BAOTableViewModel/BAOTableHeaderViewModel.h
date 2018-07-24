@@ -10,4 +10,6 @@
 
 @interface BAOTableHeaderViewModel : NSObject
 
+@property (nonatomic, assign) CGFloat headerHeight;
+
 @end

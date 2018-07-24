@@ -11,7 +11,7 @@
 		65791D10210772C600B307CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D0F210772C600B307CF /* AppDelegate.m */; };
 		65791D13210772C600B307CF /* BAOBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D12210772C600B307CF /* BAOBaseViewController.m */; };
 		65791D16210772C600B307CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65791D14210772C600B307CF /* Main.storyboard */; };
-		65791D18210772C800B307CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65791D17210772C800B307CF /* Assets.xcassets */; };
+		65791D18210772C800B307CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65791D17210772C800B307CF /* Images.xcassets */; };
 		65791D1B210772C800B307CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65791D19210772C800B307CF /* LaunchScreen.storyboard */; };
 		65791D1E210772C800B307CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D1D210772C800B307CF /* main.m */; };
 		65791D28210772C800B307CF /* BAOStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D27210772C800B307CF /* BAOStudyTests.m */; };
@@ -24,6 +24,9 @@
 		65791D57210778E200B307CF /* BAOTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D56210778E200B307CF /* BAOTableFooterView.m */; };
 		65791D5B2107796900B307CF /* BAOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D5A2107796900B307CF /* BAOCollectionViewCell.m */; };
 		65791D5E210779B600B307CF /* BAOCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D5D210779B600B307CF /* BAOCollectionReusableView.m */; };
+		65A838DB2108C0F500CC49D7 /* BAOHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838DA2108C0F500CC49D7 /* BAOHeaderView.m */; };
+		65A838E12108D1EF00CC49D7 /* BAOViewControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838E02108D1EF00CC49D7 /* BAOViewControllerUtils.m */; };
+		65A838E42108D35100CC49D7 /* BAONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838E32108D35100CC49D7 /* BAONavigationController.m */; };
 		65FEE11B21077A9C00303CA9 /* BAOCollectionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE11A21077A9C00303CA9 /* BAOCollectionCellViewModel.m */; };
 		65FEE11E21077ABE00303CA9 /* BAOCollectionReusableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE11D21077ABE00303CA9 /* BAOCollectionReusableViewModel.m */; };
 		65FEE12121077ADC00303CA9 /* BAOCollectionSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE12021077ADC00303CA9 /* BAOCollectionSectionViewModel.m */; };
@@ -63,13 +66,14 @@
 		3E0A79695F7931E9E897213F /* Pods-BAOStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudy/Pods-BAOStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		5094C7698200AC27C98B0DF8 /* Pods-BAOStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudyTests/Pods-BAOStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61C959A1E0A71C2AC3C43C70 /* Pods-BAOStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudyUITests/Pods-BAOStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		651CCF262107879000945A60 /* BAOCommonEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCommonEnums.h; sourceTree = "<group>"; };
 		65791D0B210772C600B307CF /* BAOStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAOStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65791D0E210772C600B307CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65791D0F210772C600B307CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		65791D11210772C600B307CF /* BAOBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOBaseViewController.h; sourceTree = "<group>"; };
 		65791D12210772C600B307CF /* BAOBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOBaseViewController.m; sourceTree = "<group>"; };
 		65791D15210772C600B307CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		65791D17210772C800B307CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65791D17210772C800B307CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		65791D1A210772C800B307CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65791D1C210772C800B307CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65791D1D210772C800B307CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +99,13 @@
 		65791D5A2107796900B307CF /* BAOCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionViewCell.m; sourceTree = "<group>"; };
 		65791D5C210779B600B307CF /* BAOCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionReusableView.h; sourceTree = "<group>"; };
 		65791D5D210779B600B307CF /* BAOCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionReusableView.m; sourceTree = "<group>"; };
+		65A838D92108C0F500CC49D7 /* BAOHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOHeaderView.h; sourceTree = "<group>"; };
+		65A838DA2108C0F500CC49D7 /* BAOHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOHeaderView.m; sourceTree = "<group>"; };
+		65A838DC2108CCDD00CC49D7 /* BAOLogicConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOLogicConstants.h; sourceTree = "<group>"; };
+		65A838DF2108D1EF00CC49D7 /* BAOViewControllerUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOViewControllerUtils.h; sourceTree = "<group>"; };
+		65A838E02108D1EF00CC49D7 /* BAOViewControllerUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOViewControllerUtils.m; sourceTree = "<group>"; };
+		65A838E22108D35100CC49D7 /* BAONavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAONavigationController.h; sourceTree = "<group>"; };
+		65A838E32108D35100CC49D7 /* BAONavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAONavigationController.m; sourceTree = "<group>"; };
 		65FEE11921077A9C00303CA9 /* BAOCollectionCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionCellViewModel.h; sourceTree = "<group>"; };
 		65FEE11A21077A9C00303CA9 /* BAOCollectionCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionCellViewModel.m; sourceTree = "<group>"; };
 		65FEE11C21077ABE00303CA9 /* BAOCollectionReusableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionReusableViewModel.h; sourceTree = "<group>"; };
@@ -115,7 +126,8 @@
 		65FEE13221077C1500303CA9 /* BAOTableFooterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableFooterViewModel.m; sourceTree = "<group>"; };
 		65FEE13421077C2800303CA9 /* BAOTabelViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTabelViewModel.h; sourceTree = "<group>"; };
 		65FEE13521077C2800303CA9 /* BAOTabelViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTabelViewModel.m; sourceTree = "<group>"; };
-		65FEE13721077CCF00303CA9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		65FEE13721077CCF00303CA9 /* BAOStudy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BAOStudy-Prefix.pch"; sourceTree = "<group>"; };
+		65FEE13A2107828300303CA9 /* BAOUIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOUIConstants.h; sourceTree = "<group>"; };
 		795E64144B88B9467954EADC /* libPods-BAOStudyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BAOStudyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC30AB89E355F549325ED135 /* libPods-BAOStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BAOStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -173,15 +185,16 @@
 		65791D0D210772C600B307CF /* BAOStudy */ = {
 			isa = PBXGroup;
 			children = (
+				65FEE1392107825700303CA9 /* Common */,
 				65791D40210772EA00B307CF /* Base */,
 				65791D0E210772C600B307CF /* AppDelegate.h */,
 				65791D0F210772C600B307CF /* AppDelegate.m */,
 				65791D14210772C600B307CF /* Main.storyboard */,
-				65791D17210772C800B307CF /* Assets.xcassets */,
+				65791D17210772C800B307CF /* Images.xcassets */,
 				65791D19210772C800B307CF /* LaunchScreen.storyboard */,
 				65791D1C210772C800B307CF /* Info.plist */,
 				65791D1D210772C800B307CF /* main.m */,
-				65FEE13721077CCF00303CA9 /* PrefixHeader.pch */,
+				65FEE13721077CCF00303CA9 /* BAOStudy-Prefix.pch */,
 			);
 			path = BAOStudy;
 			sourceTree = "<group>";
@@ -209,6 +222,8 @@
 			children = (
 				65FEE11621077A3000303CA9 /* ViewModels */,
 				65791D442107777C00B307CF /* Views */,
+				65A838D92108C0F500CC49D7 /* BAOHeaderView.h */,
+				65A838DA2108C0F500CC49D7 /* BAOHeaderView.m */,
 				65791D432107776F00B307CF /* ViewControllers */,
 			);
 			path = Base;
@@ -219,6 +234,8 @@
 			children = (
 				65791D11210772C600B307CF /* BAOBaseViewController.h */,
 				65791D12210772C600B307CF /* BAOBaseViewController.m */,
+				65A838E22108D35100CC49D7 /* BAONavigationController.h */,
+				65A838E32108D35100CC49D7 /* BAONavigationController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -262,6 +279,25 @@
 			path = BAOCollectionView;
 			sourceTree = "<group>";
 		};
+		65A838DD2108D1B400CC49D7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				65FEE13A2107828300303CA9 /* BAOUIConstants.h */,
+				65A838DC2108CCDD00CC49D7 /* BAOLogicConstants.h */,
+				651CCF262107879000945A60 /* BAOCommonEnums.h */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		65A838DE2108D1C600CC49D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				65A838DF2108D1EF00CC49D7 /* BAOViewControllerUtils.h */,
+				65A838E02108D1EF00CC49D7 /* BAOViewControllerUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		65FEE11621077A3000303CA9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,8 +318,8 @@
 				65FEE12C21077BCF00303CA9 /* BAOTableSectionViewModel.m */,
 				65FEE12521077B9200303CA9 /* BAOTableSectionHeaderViewModel.h */,
 				65FEE12621077B9200303CA9 /* BAOTableSectionHeaderViewModel.m */,
-				65FEE12321077B4F00303CA9 /* BAOTableCellViewModel.m */,
 				65FEE12221077B4F00303CA9 /* BAOTableCellViewModel.h */,
+				65FEE12321077B4F00303CA9 /* BAOTableCellViewModel.m */,
 				65FEE12821077BA700303CA9 /* BAOTableSectionFooterViewModel.h */,
 				65FEE12921077BA700303CA9 /* BAOTableSectionFooterViewModel.m */,
 				65FEE13121077C1500303CA9 /* BAOTableFooterViewModel.h */,
@@ -303,6 +339,15 @@
 				65FEE11D21077ABE00303CA9 /* BAOCollectionReusableViewModel.m */,
 			);
 			path = BAOCollectionViewModel;
+			sourceTree = "<group>";
+		};
+		65FEE1392107825700303CA9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				65A838DE2108D1C600CC49D7 /* Utils */,
+				65A838DD2108D1B400CC49D7 /* Constants */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		B9E2231A5F69DEFB1B531E15 /* Pods */ = {
@@ -436,7 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65791D1B210772C800B307CF /* LaunchScreen.storyboard in Resources */,
-				65791D18210772C800B307CF /* Assets.xcassets in Resources */,
+				65791D18210772C800B307CF /* Images.xcassets in Resources */,
 				65791D16210772C600B307CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,10 +593,13 @@
 				65FEE13621077C2800303CA9 /* BAOTabelViewModel.m in Sources */,
 				65FEE12421077B4F00303CA9 /* BAOTableCellViewModel.m in Sources */,
 				65791D512107787C00B307CF /* BAOTableSectionHeaderView.m in Sources */,
+				65A838E12108D1EF00CC49D7 /* BAOViewControllerUtils.m in Sources */,
 				65791D5B2107796900B307CF /* BAOCollectionViewCell.m in Sources */,
+				65A838DB2108C0F500CC49D7 /* BAOHeaderView.m in Sources */,
 				65791D472107779200B307CF /* BAOTableViewCell.m in Sources */,
 				65791D10210772C600B307CF /* AppDelegate.m in Sources */,
 				65FEE13321077C1500303CA9 /* BAOTableFooterViewModel.m in Sources */,
+				65A838E42108D35100CC49D7 /* BAONavigationController.m in Sources */,
 				65791D5E210779B600B307CF /* BAOCollectionReusableView.m in Sources */,
 				65FEE13021077C0300303CA9 /* BAOTableHeaderViewModel.m in Sources */,
 				65791D4E2107785900B307CF /* BAOTableHeaderView.m in Sources */,
@@ -729,6 +777,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BAOStudy/BAOStudy-Prefix.pch";
 				INFOPLIST_FILE = BAOStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -747,6 +797,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BAOStudy/BAOStudy-Prefix.pch";
 				INFOPLIST_FILE = BAOStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

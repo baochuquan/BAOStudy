@@ -10,4 +10,12 @@
 
 @implementation BAOTableSectionViewModel
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.cellViewModels = [NSMutableArray array];
+    }
+    return self;
+}
+
 @end

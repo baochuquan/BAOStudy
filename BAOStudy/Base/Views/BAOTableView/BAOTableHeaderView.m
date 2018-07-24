@@ -10,4 +10,26 @@
 
 @implementation BAOTableHeaderView
 
++ (instancetype)reusableHeaderWithTableView:(UITableView *)tableView
+                            reuseIdentifier:(NSString *)reuseIdentifier {
+    id header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:reuseIdentifier];
+    if (header == nil) {
+        header = [[self alloc] initWithReuseIdentifier:reuseIdentifier];
+    }
+    return header;
+}
+
++ (CGFloat)headerHeight {
+    NSAssert(NO, @"Need to override");
+    return 0;
+}
+
++ (CGFloat)headerHeightWithViewModel:(BAOTableHeaderViewModel *)viewModel {
+    return [self headerHeight];
+}
+
+- (void)bindDataWithViewModel:(BAOTableHeaderViewModel *)viewModel {
+    NSAssert(NO, @"Need to override");
+}
+
 @end

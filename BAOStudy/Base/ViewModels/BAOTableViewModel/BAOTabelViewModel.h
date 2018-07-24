@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BAOTableHeaderViewModel.h"
+#import "BAOTableFooterViewModel.h"
+#import "BAOTableSectionViewModel.h"
 
 @interface BAOTabelViewModel : NSObject
+
+@property (nonatomic, strong, nullable) __kindof BAOTableHeaderViewModel *headerViewModel;
+@property (nonatomic, strong, nullable) __kindof BAOTableFooterViewModel *footerViewModel;
+@property (nonatomic, strong) NSMutableArray<__kindof BAOTableSectionViewModel *> *sectionViewModels;
+
+- (__kindof BAOTableSectionViewModel *)sectionViewModelWithIndex:(NSInteger)index;
+- (__kindof BAOTableCellViewModel *)cellViewModelWithIndexPath:(NSIndexPath *)indexPath;
 
 @end
