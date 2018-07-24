@@ -1,0 +1,881 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0ED7F2361C8BAEC0B637B5C5 /* libPods-BAOStudyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795E64144B88B9467954EADC /* libPods-BAOStudyTests.a */; };
+		65791D10210772C600B307CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D0F210772C600B307CF /* AppDelegate.m */; };
+		65791D13210772C600B307CF /* BAOBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D12210772C600B307CF /* BAOBaseViewController.m */; };
+		65791D16210772C600B307CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65791D14210772C600B307CF /* Main.storyboard */; };
+		65791D18210772C800B307CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65791D17210772C800B307CF /* Assets.xcassets */; };
+		65791D1B210772C800B307CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65791D19210772C800B307CF /* LaunchScreen.storyboard */; };
+		65791D1E210772C800B307CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D1D210772C800B307CF /* main.m */; };
+		65791D28210772C800B307CF /* BAOStudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D27210772C800B307CF /* BAOStudyTests.m */; };
+		65791D33210772C800B307CF /* BAOStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D32210772C800B307CF /* BAOStudyUITests.m */; };
+		65791D472107779200B307CF /* BAOTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D462107779200B307CF /* BAOTableViewCell.m */; };
+		65791D4B2107781D00B307CF /* BAOTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D4A2107781D00B307CF /* BAOTableView.m */; };
+		65791D4E2107785900B307CF /* BAOTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D4D2107785900B307CF /* BAOTableHeaderView.m */; };
+		65791D512107787C00B307CF /* BAOTableSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D502107787C00B307CF /* BAOTableSectionHeaderView.m */; };
+		65791D54210778B400B307CF /* BAOTableSectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D53210778B400B307CF /* BAOTableSectionFooterView.m */; };
+		65791D57210778E200B307CF /* BAOTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D56210778E200B307CF /* BAOTableFooterView.m */; };
+		65791D5B2107796900B307CF /* BAOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D5A2107796900B307CF /* BAOCollectionViewCell.m */; };
+		65791D5E210779B600B307CF /* BAOCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D5D210779B600B307CF /* BAOCollectionReusableView.m */; };
+		65FEE11B21077A9C00303CA9 /* BAOCollectionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE11A21077A9C00303CA9 /* BAOCollectionCellViewModel.m */; };
+		65FEE11E21077ABE00303CA9 /* BAOCollectionReusableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE11D21077ABE00303CA9 /* BAOCollectionReusableViewModel.m */; };
+		65FEE12121077ADC00303CA9 /* BAOCollectionSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE12021077ADC00303CA9 /* BAOCollectionSectionViewModel.m */; };
+		65FEE12421077B4F00303CA9 /* BAOTableCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE12321077B4F00303CA9 /* BAOTableCellViewModel.m */; };
+		65FEE12721077B9200303CA9 /* BAOTableSectionHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE12621077B9200303CA9 /* BAOTableSectionHeaderViewModel.m */; };
+		65FEE12A21077BA800303CA9 /* BAOTableSectionFooterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE12921077BA700303CA9 /* BAOTableSectionFooterViewModel.m */; };
+		65FEE12D21077BCF00303CA9 /* BAOTableSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE12C21077BCF00303CA9 /* BAOTableSectionViewModel.m */; };
+		65FEE13021077C0300303CA9 /* BAOTableHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE12F21077C0300303CA9 /* BAOTableHeaderViewModel.m */; };
+		65FEE13321077C1500303CA9 /* BAOTableFooterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE13221077C1500303CA9 /* BAOTableFooterViewModel.m */; };
+		65FEE13621077C2800303CA9 /* BAOTabelViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE13521077C2800303CA9 /* BAOTabelViewModel.m */; };
+		716E44C76259A16EF6B3E5C3 /* libPods-BAOStudy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC30AB89E355F549325ED135 /* libPods-BAOStudy.a */; };
+		A2A732BC04C94EA2F3312B02 /* libPods-BAOStudyUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12526DE7152FFA68D921BE6A /* libPods-BAOStudyUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65791D24210772C800B307CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65791D03210772C600B307CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65791D0A210772C600B307CF;
+			remoteInfo = BAOStudy;
+		};
+		65791D2F210772C800B307CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65791D03210772C600B307CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65791D0A210772C600B307CF;
+			remoteInfo = BAOStudy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A7AF6B48F690FED78F17807 /* Pods-BAOStudyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudyUITests/Pods-BAOStudyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		10C244FB4B8CF41C0418B2FE /* Pods-BAOStudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudyTests/Pods-BAOStudyTests.release.xcconfig"; sourceTree = "<group>"; };
+		12526DE7152FFA68D921BE6A /* libPods-BAOStudyUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BAOStudyUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A70E803827C27B51AE3471F /* Pods-BAOStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudy/Pods-BAOStudy.release.xcconfig"; sourceTree = "<group>"; };
+		3E0A79695F7931E9E897213F /* Pods-BAOStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudy/Pods-BAOStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		5094C7698200AC27C98B0DF8 /* Pods-BAOStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudyTests/Pods-BAOStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		61C959A1E0A71C2AC3C43C70 /* Pods-BAOStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudyUITests/Pods-BAOStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		65791D0B210772C600B307CF /* BAOStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAOStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65791D0E210772C600B307CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		65791D0F210772C600B307CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65791D11210772C600B307CF /* BAOBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOBaseViewController.h; sourceTree = "<group>"; };
+		65791D12210772C600B307CF /* BAOBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOBaseViewController.m; sourceTree = "<group>"; };
+		65791D15210772C600B307CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65791D17210772C800B307CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65791D1A210772C800B307CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65791D1C210772C800B307CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65791D1D210772C800B307CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65791D23210772C800B307CF /* BAOStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BAOStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65791D27210772C800B307CF /* BAOStudyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOStudyTests.m; sourceTree = "<group>"; };
+		65791D29210772C800B307CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65791D2E210772C800B307CF /* BAOStudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BAOStudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65791D32210772C800B307CF /* BAOStudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOStudyUITests.m; sourceTree = "<group>"; };
+		65791D34210772C800B307CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65791D452107779200B307CF /* BAOTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableViewCell.h; sourceTree = "<group>"; };
+		65791D462107779200B307CF /* BAOTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableViewCell.m; sourceTree = "<group>"; };
+		65791D492107781D00B307CF /* BAOTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableView.h; sourceTree = "<group>"; };
+		65791D4A2107781D00B307CF /* BAOTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableView.m; sourceTree = "<group>"; };
+		65791D4C2107785900B307CF /* BAOTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableHeaderView.h; sourceTree = "<group>"; };
+		65791D4D2107785900B307CF /* BAOTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableHeaderView.m; sourceTree = "<group>"; };
+		65791D4F2107787C00B307CF /* BAOTableSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableSectionHeaderView.h; sourceTree = "<group>"; };
+		65791D502107787C00B307CF /* BAOTableSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableSectionHeaderView.m; sourceTree = "<group>"; };
+		65791D52210778B400B307CF /* BAOTableSectionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableSectionFooterView.h; sourceTree = "<group>"; };
+		65791D53210778B400B307CF /* BAOTableSectionFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableSectionFooterView.m; sourceTree = "<group>"; };
+		65791D55210778E200B307CF /* BAOTableFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableFooterView.h; sourceTree = "<group>"; };
+		65791D56210778E200B307CF /* BAOTableFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableFooterView.m; sourceTree = "<group>"; };
+		65791D592107796900B307CF /* BAOCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionViewCell.h; sourceTree = "<group>"; };
+		65791D5A2107796900B307CF /* BAOCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionViewCell.m; sourceTree = "<group>"; };
+		65791D5C210779B600B307CF /* BAOCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionReusableView.h; sourceTree = "<group>"; };
+		65791D5D210779B600B307CF /* BAOCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionReusableView.m; sourceTree = "<group>"; };
+		65FEE11921077A9C00303CA9 /* BAOCollectionCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionCellViewModel.h; sourceTree = "<group>"; };
+		65FEE11A21077A9C00303CA9 /* BAOCollectionCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionCellViewModel.m; sourceTree = "<group>"; };
+		65FEE11C21077ABE00303CA9 /* BAOCollectionReusableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionReusableViewModel.h; sourceTree = "<group>"; };
+		65FEE11D21077ABE00303CA9 /* BAOCollectionReusableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionReusableViewModel.m; sourceTree = "<group>"; };
+		65FEE11F21077ADC00303CA9 /* BAOCollectionSectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionSectionViewModel.h; sourceTree = "<group>"; };
+		65FEE12021077ADC00303CA9 /* BAOCollectionSectionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionSectionViewModel.m; sourceTree = "<group>"; };
+		65FEE12221077B4F00303CA9 /* BAOTableCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableCellViewModel.h; sourceTree = "<group>"; };
+		65FEE12321077B4F00303CA9 /* BAOTableCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableCellViewModel.m; sourceTree = "<group>"; };
+		65FEE12521077B9200303CA9 /* BAOTableSectionHeaderViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableSectionHeaderViewModel.h; sourceTree = "<group>"; };
+		65FEE12621077B9200303CA9 /* BAOTableSectionHeaderViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableSectionHeaderViewModel.m; sourceTree = "<group>"; };
+		65FEE12821077BA700303CA9 /* BAOTableSectionFooterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableSectionFooterViewModel.h; sourceTree = "<group>"; };
+		65FEE12921077BA700303CA9 /* BAOTableSectionFooterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableSectionFooterViewModel.m; sourceTree = "<group>"; };
+		65FEE12B21077BCF00303CA9 /* BAOTableSectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableSectionViewModel.h; sourceTree = "<group>"; };
+		65FEE12C21077BCF00303CA9 /* BAOTableSectionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableSectionViewModel.m; sourceTree = "<group>"; };
+		65FEE12E21077C0300303CA9 /* BAOTableHeaderViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableHeaderViewModel.h; sourceTree = "<group>"; };
+		65FEE12F21077C0300303CA9 /* BAOTableHeaderViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableHeaderViewModel.m; sourceTree = "<group>"; };
+		65FEE13121077C1500303CA9 /* BAOTableFooterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTableFooterViewModel.h; sourceTree = "<group>"; };
+		65FEE13221077C1500303CA9 /* BAOTableFooterViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTableFooterViewModel.m; sourceTree = "<group>"; };
+		65FEE13421077C2800303CA9 /* BAOTabelViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOTabelViewModel.h; sourceTree = "<group>"; };
+		65FEE13521077C2800303CA9 /* BAOTabelViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTabelViewModel.m; sourceTree = "<group>"; };
+		65FEE13721077CCF00303CA9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		795E64144B88B9467954EADC /* libPods-BAOStudyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BAOStudyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC30AB89E355F549325ED135 /* libPods-BAOStudy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BAOStudy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65791D08210772C600B307CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				716E44C76259A16EF6B3E5C3 /* libPods-BAOStudy.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65791D20210772C800B307CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ED7F2361C8BAEC0B637B5C5 /* libPods-BAOStudyTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65791D2B210772C800B307CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A732BC04C94EA2F3312B02 /* libPods-BAOStudyUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65791D02210772C600B307CF = {
+			isa = PBXGroup;
+			children = (
+				65791D0D210772C600B307CF /* BAOStudy */,
+				65791D26210772C800B307CF /* BAOStudyTests */,
+				65791D31210772C800B307CF /* BAOStudyUITests */,
+				65791D0C210772C600B307CF /* Products */,
+				B9E2231A5F69DEFB1B531E15 /* Pods */,
+				E91C343AD00E34CE0865736C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		65791D0C210772C600B307CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65791D0B210772C600B307CF /* BAOStudy.app */,
+				65791D23210772C800B307CF /* BAOStudyTests.xctest */,
+				65791D2E210772C800B307CF /* BAOStudyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65791D0D210772C600B307CF /* BAOStudy */ = {
+			isa = PBXGroup;
+			children = (
+				65791D40210772EA00B307CF /* Base */,
+				65791D0E210772C600B307CF /* AppDelegate.h */,
+				65791D0F210772C600B307CF /* AppDelegate.m */,
+				65791D14210772C600B307CF /* Main.storyboard */,
+				65791D17210772C800B307CF /* Assets.xcassets */,
+				65791D19210772C800B307CF /* LaunchScreen.storyboard */,
+				65791D1C210772C800B307CF /* Info.plist */,
+				65791D1D210772C800B307CF /* main.m */,
+				65FEE13721077CCF00303CA9 /* PrefixHeader.pch */,
+			);
+			path = BAOStudy;
+			sourceTree = "<group>";
+		};
+		65791D26210772C800B307CF /* BAOStudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				65791D27210772C800B307CF /* BAOStudyTests.m */,
+				65791D29210772C800B307CF /* Info.plist */,
+			);
+			path = BAOStudyTests;
+			sourceTree = "<group>";
+		};
+		65791D31210772C800B307CF /* BAOStudyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				65791D32210772C800B307CF /* BAOStudyUITests.m */,
+				65791D34210772C800B307CF /* Info.plist */,
+			);
+			path = BAOStudyUITests;
+			sourceTree = "<group>";
+		};
+		65791D40210772EA00B307CF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				65FEE11621077A3000303CA9 /* ViewModels */,
+				65791D442107777C00B307CF /* Views */,
+				65791D432107776F00B307CF /* ViewControllers */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		65791D432107776F00B307CF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65791D11210772C600B307CF /* BAOBaseViewController.h */,
+				65791D12210772C600B307CF /* BAOBaseViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		65791D442107777C00B307CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65791D582107793F00B307CF /* BAOCollectionView */,
+				65791D48210777CD00B307CF /* BAOTableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65791D48210777CD00B307CF /* BAOTableView */ = {
+			isa = PBXGroup;
+			children = (
+				65791D492107781D00B307CF /* BAOTableView.h */,
+				65791D4A2107781D00B307CF /* BAOTableView.m */,
+				65791D4C2107785900B307CF /* BAOTableHeaderView.h */,
+				65791D4D2107785900B307CF /* BAOTableHeaderView.m */,
+				65791D4F2107787C00B307CF /* BAOTableSectionHeaderView.h */,
+				65791D502107787C00B307CF /* BAOTableSectionHeaderView.m */,
+				65791D452107779200B307CF /* BAOTableViewCell.h */,
+				65791D462107779200B307CF /* BAOTableViewCell.m */,
+				65791D52210778B400B307CF /* BAOTableSectionFooterView.h */,
+				65791D53210778B400B307CF /* BAOTableSectionFooterView.m */,
+				65791D55210778E200B307CF /* BAOTableFooterView.h */,
+				65791D56210778E200B307CF /* BAOTableFooterView.m */,
+			);
+			path = BAOTableView;
+			sourceTree = "<group>";
+		};
+		65791D582107793F00B307CF /* BAOCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				65791D592107796900B307CF /* BAOCollectionViewCell.h */,
+				65791D5A2107796900B307CF /* BAOCollectionViewCell.m */,
+				65791D5C210779B600B307CF /* BAOCollectionReusableView.h */,
+				65791D5D210779B600B307CF /* BAOCollectionReusableView.m */,
+			);
+			path = BAOCollectionView;
+			sourceTree = "<group>";
+		};
+		65FEE11621077A3000303CA9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				65FEE11821077A5400303CA9 /* BAOCollectionViewModel */,
+				65FEE11721077A4400303CA9 /* BAOTableViewModel */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		65FEE11721077A4400303CA9 /* BAOTableViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				65FEE13421077C2800303CA9 /* BAOTabelViewModel.h */,
+				65FEE13521077C2800303CA9 /* BAOTabelViewModel.m */,
+				65FEE12E21077C0300303CA9 /* BAOTableHeaderViewModel.h */,
+				65FEE12F21077C0300303CA9 /* BAOTableHeaderViewModel.m */,
+				65FEE12B21077BCF00303CA9 /* BAOTableSectionViewModel.h */,
+				65FEE12C21077BCF00303CA9 /* BAOTableSectionViewModel.m */,
+				65FEE12521077B9200303CA9 /* BAOTableSectionHeaderViewModel.h */,
+				65FEE12621077B9200303CA9 /* BAOTableSectionHeaderViewModel.m */,
+				65FEE12321077B4F00303CA9 /* BAOTableCellViewModel.m */,
+				65FEE12221077B4F00303CA9 /* BAOTableCellViewModel.h */,
+				65FEE12821077BA700303CA9 /* BAOTableSectionFooterViewModel.h */,
+				65FEE12921077BA700303CA9 /* BAOTableSectionFooterViewModel.m */,
+				65FEE13121077C1500303CA9 /* BAOTableFooterViewModel.h */,
+				65FEE13221077C1500303CA9 /* BAOTableFooterViewModel.m */,
+			);
+			path = BAOTableViewModel;
+			sourceTree = "<group>";
+		};
+		65FEE11821077A5400303CA9 /* BAOCollectionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				65FEE11F21077ADC00303CA9 /* BAOCollectionSectionViewModel.h */,
+				65FEE12021077ADC00303CA9 /* BAOCollectionSectionViewModel.m */,
+				65FEE11921077A9C00303CA9 /* BAOCollectionCellViewModel.h */,
+				65FEE11A21077A9C00303CA9 /* BAOCollectionCellViewModel.m */,
+				65FEE11C21077ABE00303CA9 /* BAOCollectionReusableViewModel.h */,
+				65FEE11D21077ABE00303CA9 /* BAOCollectionReusableViewModel.m */,
+			);
+			path = BAOCollectionViewModel;
+			sourceTree = "<group>";
+		};
+		B9E2231A5F69DEFB1B531E15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E0A79695F7931E9E897213F /* Pods-BAOStudy.debug.xcconfig */,
+				3A70E803827C27B51AE3471F /* Pods-BAOStudy.release.xcconfig */,
+				5094C7698200AC27C98B0DF8 /* Pods-BAOStudyTests.debug.xcconfig */,
+				10C244FB4B8CF41C0418B2FE /* Pods-BAOStudyTests.release.xcconfig */,
+				0A7AF6B48F690FED78F17807 /* Pods-BAOStudyUITests.debug.xcconfig */,
+				61C959A1E0A71C2AC3C43C70 /* Pods-BAOStudyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E91C343AD00E34CE0865736C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC30AB89E355F549325ED135 /* libPods-BAOStudy.a */,
+				795E64144B88B9467954EADC /* libPods-BAOStudyTests.a */,
+				12526DE7152FFA68D921BE6A /* libPods-BAOStudyUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65791D0A210772C600B307CF /* BAOStudy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65791D37210772C800B307CF /* Build configuration list for PBXNativeTarget "BAOStudy" */;
+			buildPhases = (
+				6E8EFECF6FCE17CC2D62AF6F /* [CP] Check Pods Manifest.lock */,
+				65791D07210772C600B307CF /* Sources */,
+				65791D08210772C600B307CF /* Frameworks */,
+				65791D09210772C600B307CF /* Resources */,
+				9419C1E3B9FBDD73AD9417CB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BAOStudy;
+			productName = BAOStudy;
+			productReference = 65791D0B210772C600B307CF /* BAOStudy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65791D22210772C800B307CF /* BAOStudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65791D3A210772C800B307CF /* Build configuration list for PBXNativeTarget "BAOStudyTests" */;
+			buildPhases = (
+				E890CE3538711A70A51A79F6 /* [CP] Check Pods Manifest.lock */,
+				65791D1F210772C800B307CF /* Sources */,
+				65791D20210772C800B307CF /* Frameworks */,
+				65791D21210772C800B307CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65791D25210772C800B307CF /* PBXTargetDependency */,
+			);
+			name = BAOStudyTests;
+			productName = BAOStudyTests;
+			productReference = 65791D23210772C800B307CF /* BAOStudyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		65791D2D210772C800B307CF /* BAOStudyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65791D3D210772C800B307CF /* Build configuration list for PBXNativeTarget "BAOStudyUITests" */;
+			buildPhases = (
+				613705B92B739B442FFE52FD /* [CP] Check Pods Manifest.lock */,
+				65791D2A210772C800B307CF /* Sources */,
+				65791D2B210772C800B307CF /* Frameworks */,
+				65791D2C210772C800B307CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65791D30210772C800B307CF /* PBXTargetDependency */,
+			);
+			name = BAOStudyUITests;
+			productName = BAOStudyUITests;
+			productReference = 65791D2E210772C800B307CF /* BAOStudyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65791D03210772C600B307CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Big Nerd Ranch";
+				TargetAttributes = {
+					65791D0A210772C600B307CF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					65791D22210772C800B307CF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 65791D0A210772C600B307CF;
+					};
+					65791D2D210772C800B307CF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 65791D0A210772C600B307CF;
+					};
+				};
+			};
+			buildConfigurationList = 65791D06210772C600B307CF /* Build configuration list for PBXProject "BAOStudy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65791D02210772C600B307CF;
+			productRefGroup = 65791D0C210772C600B307CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65791D0A210772C600B307CF /* BAOStudy */,
+				65791D22210772C800B307CF /* BAOStudyTests */,
+				65791D2D210772C800B307CF /* BAOStudyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65791D09210772C600B307CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65791D1B210772C800B307CF /* LaunchScreen.storyboard in Resources */,
+				65791D18210772C800B307CF /* Assets.xcassets in Resources */,
+				65791D16210772C600B307CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65791D21210772C800B307CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65791D2C210772C800B307CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		613705B92B739B442FFE52FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BAOStudyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E8EFECF6FCE17CC2D62AF6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BAOStudy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9419C1E3B9FBDD73AD9417CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BAOStudy/Pods-BAOStudy-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BAOStudy/Pods-BAOStudy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E890CE3538711A70A51A79F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BAOStudyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65791D07210772C600B307CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65791D13210772C600B307CF /* BAOBaseViewController.m in Sources */,
+				65FEE11B21077A9C00303CA9 /* BAOCollectionCellViewModel.m in Sources */,
+				65FEE12A21077BA800303CA9 /* BAOTableSectionFooterViewModel.m in Sources */,
+				65791D1E210772C800B307CF /* main.m in Sources */,
+				65791D4B2107781D00B307CF /* BAOTableView.m in Sources */,
+				65791D57210778E200B307CF /* BAOTableFooterView.m in Sources */,
+				65FEE12D21077BCF00303CA9 /* BAOTableSectionViewModel.m in Sources */,
+				65FEE11E21077ABE00303CA9 /* BAOCollectionReusableViewModel.m in Sources */,
+				65FEE13621077C2800303CA9 /* BAOTabelViewModel.m in Sources */,
+				65FEE12421077B4F00303CA9 /* BAOTableCellViewModel.m in Sources */,
+				65791D512107787C00B307CF /* BAOTableSectionHeaderView.m in Sources */,
+				65791D5B2107796900B307CF /* BAOCollectionViewCell.m in Sources */,
+				65791D472107779200B307CF /* BAOTableViewCell.m in Sources */,
+				65791D10210772C600B307CF /* AppDelegate.m in Sources */,
+				65FEE13321077C1500303CA9 /* BAOTableFooterViewModel.m in Sources */,
+				65791D5E210779B600B307CF /* BAOCollectionReusableView.m in Sources */,
+				65FEE13021077C0300303CA9 /* BAOTableHeaderViewModel.m in Sources */,
+				65791D4E2107785900B307CF /* BAOTableHeaderView.m in Sources */,
+				65791D54210778B400B307CF /* BAOTableSectionFooterView.m in Sources */,
+				65FEE12721077B9200303CA9 /* BAOTableSectionHeaderViewModel.m in Sources */,
+				65FEE12121077ADC00303CA9 /* BAOCollectionSectionViewModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65791D1F210772C800B307CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65791D28210772C800B307CF /* BAOStudyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65791D2A210772C800B307CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65791D33210772C800B307CF /* BAOStudyUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65791D25210772C800B307CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65791D0A210772C600B307CF /* BAOStudy */;
+			targetProxy = 65791D24210772C800B307CF /* PBXContainerItemProxy */;
+		};
+		65791D30210772C800B307CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65791D0A210772C600B307CF /* BAOStudy */;
+			targetProxy = 65791D2F210772C800B307CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		65791D14210772C600B307CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65791D15210772C600B307CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		65791D19210772C800B307CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65791D1A210772C800B307CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65791D35210772C800B307CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		65791D36210772C800B307CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65791D38210772C800B307CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E0A79695F7931E9E897213F /* Pods-BAOStudy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29QXUV376B;
+				INFOPLIST_FILE = BAOStudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.BAOStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65791D39210772C800B307CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A70E803827C27B51AE3471F /* Pods-BAOStudy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29QXUV376B;
+				INFOPLIST_FILE = BAOStudy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.BAOStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		65791D3B210772C800B307CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5094C7698200AC27C98B0DF8 /* Pods-BAOStudyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29QXUV376B;
+				INFOPLIST_FILE = BAOStudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.BAOStudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BAOStudy.app/BAOStudy";
+			};
+			name = Debug;
+		};
+		65791D3C210772C800B307CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10C244FB4B8CF41C0418B2FE /* Pods-BAOStudyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29QXUV376B;
+				INFOPLIST_FILE = BAOStudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.BAOStudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BAOStudy.app/BAOStudy";
+			};
+			name = Release;
+		};
+		65791D3E210772C800B307CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A7AF6B48F690FED78F17807 /* Pods-BAOStudyUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29QXUV376B;
+				INFOPLIST_FILE = BAOStudyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.BAOStudyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BAOStudy;
+			};
+			name = Debug;
+		};
+		65791D3F210772C800B307CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61C959A1E0A71C2AC3C43C70 /* Pods-BAOStudyUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29QXUV376B;
+				INFOPLIST_FILE = BAOStudyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.BAOStudyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BAOStudy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65791D06210772C600B307CF /* Build configuration list for PBXProject "BAOStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65791D35210772C800B307CF /* Debug */,
+				65791D36210772C800B307CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65791D37210772C800B307CF /* Build configuration list for PBXNativeTarget "BAOStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65791D38210772C800B307CF /* Debug */,
+				65791D39210772C800B307CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65791D3A210772C800B307CF /* Build configuration list for PBXNativeTarget "BAOStudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65791D3B210772C800B307CF /* Debug */,
+				65791D3C210772C800B307CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65791D3D210772C800B307CF /* Build configuration list for PBXNativeTarget "BAOStudyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65791D3E210772C800B307CF /* Debug */,
+				65791D3F210772C800B307CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65791D03210772C600B307CF /* Project object */;
+}

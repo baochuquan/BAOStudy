@@ -1,0 +1,26 @@
+PODS:
+  - Mantle (1.5.8):
+    - Mantle/extobjc (= 1.5.8)
+  - Mantle/extobjc (1.5.8)
+  - Masonry (1.1.0)
+  - MJRefresh (3.1.15.3)
+
+DEPENDENCIES:
+  - Mantle (~> 1.0)
+  - Masonry (~> 1.0)
+  - MJRefresh (~> 3.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Mantle
+    - Masonry
+    - MJRefresh
+
+SPEC CHECKSUMS:
+  Mantle: f03b2b606c3f0cabd80214ad8a2fed6b464a7359
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+
+PODFILE CHECKSUM: 53aaf32e89e88ef0f4f05d642f1bceada78e38dd
+
+COCOAPODS: 1.5.3
