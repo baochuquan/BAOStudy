@@ -18,4 +18,11 @@ typedef NS_ENUM(NSUInteger, BAOTableViewCellSeparatorType) {
     BAOTableViewCellSeparatorTypeNone
 };
 
+typedef NS_ENUM(NSUInteger, BAOTabBarItemType) {
+    BAOTabBarItemTypeHome = 0,
+    BAOTabBarItemTypeFunction,
+    BAOTabBarItemTypeDiscovery,
+    BAOTabBarItemTypeMe
+};
+
 #endif /* BAOCommonEnums_h */

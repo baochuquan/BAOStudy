@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "BAORootViewController.h"
+#import "BAONavigationController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
+    [self setupInitialViewControllerWithLaunchOptions:launchOptions];
     return YES;
 }
 
@@ -47,5 +50,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Setup
+
+- (void)setupInitialViewControllerWithLaunchOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    BAORootViewController *rootViewController = [[BAORootViewController alloc] init];
+    BAONavigationController *nav = [[BAONavigationController alloc] initWithRootViewController:rootViewController];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+}
 
 @end
