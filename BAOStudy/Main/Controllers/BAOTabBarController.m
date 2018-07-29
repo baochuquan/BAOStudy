@@ -10,6 +10,9 @@
 #import "BAOTabBarItem.h"
 #import "BAONavigationController.h"
 #import "BAOBaseViewController.h"
+#import "BAOHomeViewController.h"
+#import "BAODiscoveryViewController.h"
+#import "BAOMeViewController.h"
 
 @interface BAOTabBarController ()<UITabBarControllerDelegate>
 
@@ -35,49 +38,34 @@
 
 - (void)setupTabBarItems {
     BAOTabBarItem *homeItem = [self createTabBarItemWithClass:[BAOHomeViewController class]
-                                                     tabBarId:BAOTabItemIdHome
-                                                        title:@"检查"
-                                                    imageName:@"TabBarArithmetic"
-                                                indicatorView:nil
-                                                 logEventName:ClickTabCheckButton];
-    BAOTabBarItem *practiceItem = [self createTabBarItemWithClass:[BAOPracticeHomeViewController class]
-                                                         tabBarId:BAOTabItemIdPractice
-                                                            title:@"练习"
-                                                        imageName:@"TabBarPractice"
-                                                    indicatorView:nil
-                                                     logEventName:ClickTabExerciseButton];
-    BAOTabBarItem *kumonItem = [self createTabBarItemWithClass:[BAOKumonViewController class]
-                                                      tabBarId:BAOTabItemIdKumon
-                                                         title:@"学院"
-                                                     imageName:@"TabbarKumon"
-                                                 indicatorView:[BAOViewUtils createRedPointView]
-                                                  logEventName:ClickTabKumonButton];
-    BAOTabBarItem *meItem = [self createTabBarItemWithClass:[BAOProfileViewController class]
-                                                   tabBarId:BAOTabItemIdMe
+                                                   tabBarType:BAOTabBarItemTypeHome
+                                                        title:@"首页"
+                                                    imageName:@"TabBarHome"];
+    BAOTabBarItem *discoveryItem = [self createTabBarItemWithClass:[BAODiscoveryViewController class]
+                                                        tabBarType:BAOTabBarItemTypeDiscovery
+                                                         title:@"发现"
+                                                     imageName:@"TabBarDiscovery"];
+    BAOTabBarItem *meItem = [self createTabBarItemWithClass:[BAOMeViewController class]
+                                                 tabBarType:BAOTabBarItemTypeMe
                                                       title:@"我"
-                                                  imageName:@"TabBarMe"
-                                              indicatorView:[BAOViewUtils createRedPointView]
-                                               logEventName:ClickTabMeButton];
-    self.tabBarItems = @[homeItem, practiceItem, kumonItem, meItem];
-    self.viewControllers = @[homeItem.navigationController, practiceItem.navigationController, kumonItem.navigationController, meItem.navigationController];
-
-    kumonItem.indicatorView.hidden = ![[BAOUserTable sharedInstance] shouldShowKumonRedPoint];
-    [self.tabBar addSubview:kumonItem.indicatorView];
+                                                  imageName:@"TabBarMe"];
+    self.tabBarItems = @[homeItem, discoveryItem, meItem];
+    self.viewControllers = @[homeItem.navigationController,
+                             discoveryItem.navigationController,
+                             meItem.navigationController];
     [self.tabBar addSubview:meItem.indicatorView];
 }
 
 - (BAOTabBarItem *)createTabBarItemWithClass:(Class)class
-                                    tabBarId:(NSInteger)tabBarId
+                                  tabBarType:(NSInteger)tabBarType
                                        title:(NSString *)title
-                                   imageName:(NSString *)imageName
-                               indicatorView:(UIView *)indicatorView
-                                logEventName:(NSString *)logEventName {
+                                   imageName:(NSString *)imageName {
     BAOTabBarItem *tabBarItem = [[BAOTabBarItem alloc] init];
-    tabBarItem.itemId = tabBarId;
+    tabBarItem.itemType = tabBarType;
     BAOBaseViewController *vc = [[class alloc] init];
     tabBarItem.viewController = vc;
     UIImage *originalImage = [IMAGE(imageName) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *selectedImage = [IMAGE([imageName stringByAppendingString:@"Pressed"]) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectedImage = [IMAGE([imageName stringByAppendingString:@"Selected"]) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:title image:originalImage selectedImage:selectedImage];
     [item setTitleTextAttributes:@{NSForegroundColorAttributeName: COLOR_SECONDARY_TEXT} forState:UIControlStateNormal];
     [item setTitleTextAttributes:@{NSForegroundColorAttributeName: COLOR_YELLOW_DEFAULT} forState:UIControlStateSelected];
@@ -86,9 +74,7 @@
     UINavigationController *nav = [[BAONavigationController alloc] initWithRootViewController:vc];
     nav.tabBarItem = item;
     tabBarItem.navigationController = nav;
-    tabBarItem.indicatorView = indicatorView;
     tabBarItem.indicatorView.hidden = YES;
-    tabBarItem.logEventName = logEventName;
     return tabBarItem;
 }
 

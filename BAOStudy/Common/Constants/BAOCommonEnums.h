@@ -20,7 +20,6 @@ typedef NS_ENUM(NSUInteger, BAOTableViewCellSeparatorType) {
 
 typedef NS_ENUM(NSUInteger, BAOTabBarItemType) {
     BAOTabBarItemTypeHome = 0,
-    BAOTabBarItemTypeFunction,
     BAOTabBarItemTypeDiscovery,
     BAOTabBarItemTypeMe
 };

@@ -31,6 +31,8 @@
 		65A838EC2108D74200CC49D7 /* BAOTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838EB2108D74200CC49D7 /* BAOTabBarController.m */; };
 		65A838F02108D97200CC49D7 /* BAOTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838EF2108D97200CC49D7 /* BAOTabBarItem.m */; };
 		65A838F72108DBB600CC49D7 /* BAOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838F62108DBB600CC49D7 /* BAOHomeViewController.m */; };
+		65E34873210DFF1C00FCD7CC /* BAODiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E34872210DFF1C00FCD7CC /* BAODiscoveryViewController.m */; };
+		65E34876210DFF3500FCD7CC /* BAOMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E34875210DFF3500FCD7CC /* BAOMeViewController.m */; };
 		65FEE11B21077A9C00303CA9 /* BAOCollectionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE11A21077A9C00303CA9 /* BAOCollectionCellViewModel.m */; };
 		65FEE11E21077ABE00303CA9 /* BAOCollectionReusableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE11D21077ABE00303CA9 /* BAOCollectionReusableViewModel.m */; };
 		65FEE12121077ADC00303CA9 /* BAOCollectionSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FEE12021077ADC00303CA9 /* BAOCollectionSectionViewModel.m */; };
@@ -118,6 +120,10 @@
 		65A838EF2108D97200CC49D7 /* BAOTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTabBarItem.m; sourceTree = "<group>"; };
 		65A838F52108DBB600CC49D7 /* BAOHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOHomeViewController.h; sourceTree = "<group>"; };
 		65A838F62108DBB600CC49D7 /* BAOHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOHomeViewController.m; sourceTree = "<group>"; };
+		65E34871210DFF1C00FCD7CC /* BAODiscoveryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAODiscoveryViewController.h; sourceTree = "<group>"; };
+		65E34872210DFF1C00FCD7CC /* BAODiscoveryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAODiscoveryViewController.m; sourceTree = "<group>"; };
+		65E34874210DFF3500FCD7CC /* BAOMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOMeViewController.h; sourceTree = "<group>"; };
+		65E34875210DFF3500FCD7CC /* BAOMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOMeViewController.m; sourceTree = "<group>"; };
 		65FEE11921077A9C00303CA9 /* BAOCollectionCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionCellViewModel.h; sourceTree = "<group>"; };
 		65FEE11A21077A9C00303CA9 /* BAOCollectionCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionCellViewModel.m; sourceTree = "<group>"; };
 		65FEE11C21077ABE00303CA9 /* BAOCollectionReusableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionReusableViewModel.h; sourceTree = "<group>"; };
@@ -198,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				65A838F22108DB7A00CC49D7 /* Home */,
-				65A838F42108DB9400CC49D7 /* Function */,
 				65A838F32108DB8100CC49D7 /* Discovery */,
 				65A838F12108DB6D00CC49D7 /* Me */,
 				65A838E52108D5EB00CC49D7 /* Main */,
@@ -251,8 +256,6 @@
 			children = (
 				65791D11210772C600B307CF /* BAOBaseViewController.h */,
 				65791D12210772C600B307CF /* BAOBaseViewController.m */,
-				65A838E22108D35100CC49D7 /* BAONavigationController.h */,
-				65A838E32108D35100CC49D7 /* BAONavigationController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -329,6 +332,8 @@
 			children = (
 				65A838E72108D62100CC49D7 /* BAORootViewController.h */,
 				65A838E82108D62100CC49D7 /* BAORootViewController.m */,
+				65A838E22108D35100CC49D7 /* BAONavigationController.h */,
+				65A838E32108D35100CC49D7 /* BAONavigationController.m */,
 				65A838EA2108D74200CC49D7 /* BAOTabBarController.h */,
 				65A838EB2108D74200CC49D7 /* BAOTabBarController.m */,
 			);
@@ -347,6 +352,8 @@
 		65A838F12108DB6D00CC49D7 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				65E34874210DFF3500FCD7CC /* BAOMeViewController.h */,
+				65E34875210DFF3500FCD7CC /* BAOMeViewController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -363,15 +370,10 @@
 		65A838F32108DB8100CC49D7 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				65E34871210DFF1C00FCD7CC /* BAODiscoveryViewController.h */,
+				65E34872210DFF1C00FCD7CC /* BAODiscoveryViewController.m */,
 			);
 			path = Discovery;
-			sourceTree = "<group>";
-		};
-		65A838F42108DB9400CC49D7 /* Function */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Function;
 			sourceTree = "<group>";
 		};
 		65FEE11621077A3000303CA9 /* ViewModels */ = {
@@ -658,6 +660,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E34873210DFF1C00FCD7CC /* BAODiscoveryViewController.m in Sources */,
+				65E34876210DFF3500FCD7CC /* BAOMeViewController.m in Sources */,
 				65A838F72108DBB600CC49D7 /* BAOHomeViewController.m in Sources */,
 				65791D13210772C600B307CF /* BAOBaseViewController.m in Sources */,
 				65FEE11B21077A9C00303CA9 /* BAOCollectionCellViewModel.m in Sources */,
