@@ -6,9 +6,9 @@
 //  Copyright © 2018年 Big Nerd Ranch. All rights reserved.
 //
 
-#import "BAOTabelViewModel.h"
+#import "BAOTableViewModel.h"
 
-@implementation BAOTabelViewModel
+@implementation BAOTableViewModel
 
 - (instancetype)init {
     self = [super init];

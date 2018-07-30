@@ -16,8 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupSubviews];
 }
 
+#pragma mark - Setup Methods
+
+- (void)setupSubviews {
+    [self setupHeaderView];
+}
+
+- (void)setupHeaderView {
+    self.headerView.title = @"我";
+    [self.headerView removeLeftButton];
+}
 
 @end

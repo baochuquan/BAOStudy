@@ -11,7 +11,7 @@
 #import "BAOTableFooterViewModel.h"
 #import "BAOTableSectionViewModel.h"
 
-@interface BAOTabelViewModel : NSObject
+@interface BAOTableViewModel : NSObject
 
 @property (nonatomic, strong, nullable) __kindof BAOTableHeaderViewModel *headerViewModel;
 @property (nonatomic, strong, nullable) __kindof BAOTableFooterViewModel *footerViewModel;

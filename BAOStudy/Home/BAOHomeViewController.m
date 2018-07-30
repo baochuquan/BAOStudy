@@ -16,19 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupSubviews];
 }
 
 #pragma mark - Setup Methods
 
 - (void)setupSubviews {
-    self.contentView.backgroundColor = COLOR_YELLOW_DEFAULT;
     [self setupHeaderView];
 }
 
 - (void)setupHeaderView {
-    self.headerView.hidden = YES;
-    self.headerView.title = @"";
+    self.headerView.title = @"首页";
     [self.headerView removeLeftButton];
 }
 
