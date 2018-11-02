@@ -22,7 +22,7 @@
 
 #define UI_COMMON_VERTICAL_PADDING      16
 #define UI_COMMON_HORIZONTAL_PADDING    16
-#define UI_BOTTOM_PADDING               (IS_IPHONEX ? 34 : 0)
+#define UI_BOTTOM_PADDING               (IS_IPHONE_X ? 34 : 0)
 
 #define UI_ONE_PIXEL_HEIGHT             ([UIScreen mainScreen].scale < 1.5 ? 1 : ([UIScreen mainScreen].scale < 2.5 ? 0.5 : 0.3))
 

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0ED7F2361C8BAEC0B637B5C5 /* libPods-BAOStudyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 795E64144B88B9467954EADC /* libPods-BAOStudyTests.a */; };
+		65565A5E21109F24001E6B3C /* BAOAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A5D21109F24001E6B3C /* BAOAnimationListViewController.m */; };
+		65565A612110A08E001E6B3C /* BAOAugmentedRealityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A602110A08E001E6B3C /* BAOAugmentedRealityListViewController.m */; };
+		65565A642110A950001E6B3C /* BAOAnimationLottieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A632110A950001E6B3C /* BAOAnimationLottieViewController.m */; };
+		65565A682110B1F2001E6B3C /* BlinkingCursor.json in Resources */ = {isa = PBXBuildFile; fileRef = 65565A672110B1F2001E6B3C /* BlinkingCursor.json */; };
+		65565A6A2110B723001E6B3C /* TwitterHeart.json in Resources */ = {isa = PBXBuildFile; fileRef = 65565A692110B723001E6B3C /* TwitterHeart.json */; };
 		65791D10210772C600B307CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D0F210772C600B307CF /* AppDelegate.m */; };
 		65791D13210772C600B307CF /* BAOBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D12210772C600B307CF /* BAOBaseViewController.m */; };
 		65791D16210772C600B307CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65791D14210772C600B307CF /* Main.storyboard */; };
@@ -76,6 +81,14 @@
 		5094C7698200AC27C98B0DF8 /* Pods-BAOStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudyTests/Pods-BAOStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61C959A1E0A71C2AC3C43C70 /* Pods-BAOStudyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAOStudyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BAOStudyUITests/Pods-BAOStudyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		651CCF262107879000945A60 /* BAOCommonEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCommonEnums.h; sourceTree = "<group>"; };
+		65565A5C21109F24001E6B3C /* BAOAnimationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOAnimationListViewController.h; sourceTree = "<group>"; };
+		65565A5D21109F24001E6B3C /* BAOAnimationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOAnimationListViewController.m; sourceTree = "<group>"; };
+		65565A5F2110A08E001E6B3C /* BAOAugmentedRealityListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOAugmentedRealityListViewController.h; sourceTree = "<group>"; };
+		65565A602110A08E001E6B3C /* BAOAugmentedRealityListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOAugmentedRealityListViewController.m; sourceTree = "<group>"; };
+		65565A622110A950001E6B3C /* BAOAnimationLottieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOAnimationLottieViewController.h; sourceTree = "<group>"; };
+		65565A632110A950001E6B3C /* BAOAnimationLottieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOAnimationLottieViewController.m; sourceTree = "<group>"; };
+		65565A672110B1F2001E6B3C /* BlinkingCursor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BlinkingCursor.json; sourceTree = "<group>"; };
+		65565A692110B723001E6B3C /* TwitterHeart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TwitterHeart.json; sourceTree = "<group>"; };
 		65791D0B210772C600B307CF /* BAOStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAOStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65791D0E210772C600B307CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65791D0F210772C600B307CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,6 +200,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65565A5B21109EB8001E6B3C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				65565A5C21109F24001E6B3C /* BAOAnimationListViewController.h */,
+				65565A5D21109F24001E6B3C /* BAOAnimationListViewController.m */,
+				65565A622110A950001E6B3C /* BAOAnimationLottieViewController.h */,
+				65565A632110A950001E6B3C /* BAOAnimationLottieViewController.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		65565A652110B0ED001E6B3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65565A662110B1DD001E6B3C /* LottieJSON */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65565A662110B1DD001E6B3C /* LottieJSON */ = {
+			isa = PBXGroup;
+			children = (
+				65565A672110B1F2001E6B3C /* BlinkingCursor.json */,
+				65565A692110B723001E6B3C /* TwitterHeart.json */,
+			);
+			path = LottieJSON;
+			sourceTree = "<group>";
+		};
 		65791D02210772C600B307CF = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +263,7 @@
 				65791D0F210772C600B307CF /* AppDelegate.m */,
 				65791D14210772C600B307CF /* Main.storyboard */,
 				65791D17210772C800B307CF /* Images.xcassets */,
+				65565A652110B0ED001E6B3C /* Supporting Files */,
 				65791D19210772C800B307CF /* LaunchScreen.storyboard */,
 				65791D1C210772C800B307CF /* Info.plist */,
 				65791D1D210772C800B307CF /* main.m */,
@@ -379,6 +421,7 @@
 		65A838F32108DB8100CC49D7 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				65565A5B21109EB8001E6B3C /* Animations */,
 				65E3487F210E1FAF00FCD7CC /* AR */,
 				65E34871210DFF1C00FCD7CC /* BAODiscoveryViewController.h */,
 				65E34872210DFF1C00FCD7CC /* BAODiscoveryViewController.m */,
@@ -393,6 +436,8 @@
 		65E3487F210E1FAF00FCD7CC /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				65565A5F2110A08E001E6B3C /* BAOAugmentedRealityListViewController.h */,
+				65565A602110A08E001E6B3C /* BAOAugmentedRealityListViewController.m */,
 				65E34880210E202400FCD7CC /* BAOARKitDemoViewController.h */,
 				65E34881210E202400FCD7CC /* BAOARKitDemoViewController.m */,
 			);
@@ -583,7 +628,9 @@
 			files = (
 				65791D1B210772C800B307CF /* LaunchScreen.storyboard in Resources */,
 				65791D18210772C800B307CF /* Images.xcassets in Resources */,
+				65565A6A2110B723001E6B3C /* TwitterHeart.json in Resources */,
 				65791D16210772C600B307CF /* Main.storyboard in Resources */,
+				65565A682110B1F2001E6B3C /* BlinkingCursor.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +750,8 @@
 				65A838E12108D1EF00CC49D7 /* BAOViewControllerUtils.m in Sources */,
 				65791D5B2107796900B307CF /* BAOCollectionViewCell.m in Sources */,
 				65A838DB2108C0F500CC49D7 /* BAOHeaderView.m in Sources */,
+				65565A5E21109F24001E6B3C /* BAOAnimationListViewController.m in Sources */,
+				65565A612110A08E001E6B3C /* BAOAugmentedRealityListViewController.m in Sources */,
 				65791D472107779200B307CF /* BAOTableViewCell.m in Sources */,
 				65E3487B210E1AC600FCD7CC /* BAODiscoveryEntryCell.m in Sources */,
 				65791D10210772C600B307CF /* AppDelegate.m in Sources */,
@@ -716,6 +765,7 @@
 				65A838EC2108D74200CC49D7 /* BAOTabBarController.m in Sources */,
 				65FEE12721077B9200303CA9 /* BAOTableSectionHeaderViewModel.m in Sources */,
 				65FEE12121077ADC00303CA9 /* BAOCollectionSectionViewModel.m in Sources */,
+				65565A642110A950001E6B3C /* BAOAnimationLottieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

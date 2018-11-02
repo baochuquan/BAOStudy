@@ -9,11 +9,16 @@
 #import "BAOTableCellViewModel.h"
 
 static const NSInteger CellAugmentedReality = 0;
+static const NSInteger CellAnimation = 1;
+
+static const NSInteger CellAnimationLottie = 11;
 
 @interface BAODiscoveryEntryCellViewModel : BAOTableCellViewModel
 
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *descr;
 
-+ (NSArray<BAODiscoveryEntryCellViewModel *> *)defaultViewModels;
++ (NSArray<BAODiscoveryEntryCellViewModel *> *)discoveryViewModels;
++ (NSArray<BAODiscoveryEntryCellViewModel *> *)animationViewModels;
 
 @end

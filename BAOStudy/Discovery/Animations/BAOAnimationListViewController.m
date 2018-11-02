@@ -1,27 +1,26 @@
 //
-//  BAODiscoveryViewController.m
+//  BAOAnimationListViewController.m
 //  BAOStudy
 //
-//  Created by baochuquan on 2018/7/29.
+//  Created by baochuquan on 2018/7/31.
 //  Copyright © 2018年 Big Nerd Ranch. All rights reserved.
 //
 
-#import "BAODiscoveryViewController.h"
+#import "BAOAnimationListViewController.h"
 #import "BAOTableView.h"
 #import "BAOTableViewModel.h"
 #import "BAODiscoveryEntryCell.h"
 #import "BAODiscoveryEntryCellViewModel.h"
-#import "BAOAugmentedRealityListViewController.h"
-#import "BAOAnimationListViewController.h"
+#import "BAOAnimationLottieViewController.h"
 
-@interface BAODiscoveryViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface BAOAnimationListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) BAOTableViewModel *viewModel;
 
 @end
 
-@implementation BAODiscoveryViewController
+@implementation BAOAnimationListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,17 +37,15 @@
     section.sectionId = 0;
     [self.viewModel.sectionViewModels addObject:section];
 
-    section.cellViewModels = [[BAODiscoveryEntryCellViewModel discoveryViewModels] mutableCopy];
+    section.cellViewModels = [[BAODiscoveryEntryCellViewModel animationViewModels] mutableCopy];
 }
 
 - (void)setupSubviews {
     [self setupHeaderView];
     [self setupTableView];
 }
-
 - (void)setupHeaderView {
-    self.headerView.title = @"发现";
-    [self.headerView removeLeftButton];
+    self.headerView.title = @"动画效果";
 }
 
 - (void)setupTableView {
@@ -88,14 +85,8 @@
     BAOTableSectionViewModel *sectionVM = [self.viewModel sectionViewModelWithIndex:indexPath.section];
     BAOTableCellViewModel *cellVM = [self.viewModel cellViewModelWithIndexPath:indexPath];
     switch (cellVM.cellId) {
-        case CellAugmentedReality: {
-            BAOAugmentedRealityListViewController *vc = [[BAOAugmentedRealityListViewController alloc] init];
-            vc.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-        case CellAnimation: {
-            BAOAnimationListViewController *vc = [[BAOAnimationListViewController alloc] init];
+        case CellAnimationLottie: {
+            BAOAnimationLottieViewController *vc = [[BAOAnimationLottieViewController alloc] init];
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
             break;
@@ -108,5 +99,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self.viewModel cellViewModelWithIndexPath:indexPath].cellHeight;
 }
+
 
 @end

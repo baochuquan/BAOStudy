@@ -18,6 +18,7 @@
 #define IS_IPAD                         ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 #define IS_IPHONE_X                     ([[UIScreen mainScreen] nativeBounds].size.height == 2436)
 
+
 /// 操作系统信息常量
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 

@@ -9,11 +9,12 @@
 #import "BAODiscoveryEntryCell.h"
 #import "BAODiscoveryEntryCellViewModel.h"
 
-static const CGFloat CellHeight = 55;
+static const CGFloat CellHeight = 65;
 
 @interface BAODiscoveryEntryCell ()
 
-@property (nonatomic, strong) UILabel *title;
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *descriptionLabel;
 
 @end
 
@@ -31,17 +32,27 @@ static const CGFloat CellHeight = 55;
 #pragma mark - Setup
 
 - (void)setupSubviews {
-    self.title = [[UILabel alloc] init];
-    self.title.font = FONT_SIZE_14;
-    self.title.textColor = COLOR_TITLE;
-    self.title.textAlignment = NSTextAlignmentLeft;
-    [self addSubview:self.title];
+    self.titleLabel = [[UILabel alloc] init];
+    self.titleLabel.font = FONT_SIZE_14;
+    self.titleLabel.textColor = COLOR_TITLE;
+    self.titleLabel.textAlignment = NSTextAlignmentLeft;
+    [self addSubview:self.titleLabel];
+
+    self.descriptionLabel = [[UILabel alloc] init];
+    self.descriptionLabel.font = FONT_SIZE(10);
+    self.descriptionLabel.textColor = COLOR_SUB_TITLE;
+    self.descriptionLabel.textAlignment = NSTextAlignmentLeft;
+    [self addSubview:self.descriptionLabel];
 }
 
 - (void)setupAutoLayout {
-    [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.title.superview).offset(UI_COMMON_VERTICAL_PADDING);
-        make.left.equalTo(self.title.superview).offset(UI_COMMON_HORIZONTAL_PADDING);
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.titleLabel.superview).offset(UI_COMMON_VERTICAL_PADDING);
+        make.left.equalTo(self.titleLabel.superview).offset(UI_COMMON_HORIZONTAL_PADDING);
+    }];
+    [self.descriptionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.titleLabel.mas_bottom).offset(4);
+        make.left.equalTo(self.descriptionLabel.superview).offset(UI_COMMON_HORIZONTAL_PADDING);
     }];
 }
 
@@ -53,7 +64,8 @@ static const CGFloat CellHeight = 55;
 
 - (void)bindDataWithViewModel:(BAODiscoveryEntryCellViewModel *)viewModel {
     [super bindDataWithViewModel:viewModel];
-    self.title.text = viewModel.title;
+    self.titleLabel.text = viewModel.title;
+    self.descriptionLabel.text = viewModel.descr;
 }
 
 @end

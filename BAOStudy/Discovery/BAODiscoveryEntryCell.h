@@ -9,8 +9,6 @@
 #import "BAOTableViewCell.h"
 #import "BAODiscoveryEntryCellViewModel.h"
 
-
-
 @interface BAODiscoveryEntryCell : BAOTableViewCell
 
 @end

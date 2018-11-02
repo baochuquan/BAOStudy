@@ -11,8 +11,8 @@
 
 #import "Masonry.h"
 
-#import "BAOUIConstants.h"
 #import "BAOLogicConstants.h"
+#import "BAOUIConstants.h"
 #import "BAOCommonEnums.h"
 
 #import "BAOViewControllerUtils.h"
