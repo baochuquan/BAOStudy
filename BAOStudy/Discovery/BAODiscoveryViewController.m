@@ -13,6 +13,7 @@
 #import "BAODiscoveryEntryCellViewModel.h"
 #import "BAOAugmentedRealityListViewController.h"
 #import "BAOAnimationListViewController.h"
+#import "BAOStudy-Swift.h"
 
 @interface BAODiscoveryViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -96,6 +97,12 @@
         }
         case CellAnimation: {
             BAOAnimationListViewController *vc = [[BAOAnimationListViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case CellRxSwift: {
+            BAORxSwiftViewController *vc = [[BAORxSwiftViewController alloc] init];
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
             break;

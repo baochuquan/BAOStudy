@@ -16,10 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupValues];
     [self setupSubviews];
 }
 
 #pragma mark - Setup Methods
+
+- (void)setupValues {
+    
+}
 
 - (void)setupSubviews {
     [self setupHeaderView];

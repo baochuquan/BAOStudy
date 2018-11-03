@@ -10,6 +10,7 @@
 
 static const NSInteger CellAugmentedReality = 0;
 static const NSInteger CellAnimation = 1;
+static const NSInteger CellRxSwift = 2;
 
 static const NSInteger CellAnimationLottie = 11;
 

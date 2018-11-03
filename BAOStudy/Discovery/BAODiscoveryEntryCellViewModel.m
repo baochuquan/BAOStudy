@@ -26,6 +26,12 @@
     animationViewModel.cellId =  CellAnimation;
     [viewModels addObject:animationViewModel];
 
+    BAODiscoveryEntryCellViewModel *rxSwiftViewModel = [[BAODiscoveryEntryCellViewModel alloc] init];
+    rxSwiftViewModel.title = @"RxSwift";
+    rxSwiftViewModel.descr = @"BAORxSwiftViewController";
+    rxSwiftViewModel.cellId = CellRxSwift;
+    [viewModels addObject:rxSwiftViewModel];
+
     return [viewModels copy];
 }
 

@@ -13,6 +13,7 @@
 		65565A642110A950001E6B3C /* BAOAnimationLottieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A632110A950001E6B3C /* BAOAnimationLottieViewController.m */; };
 		65565A682110B1F2001E6B3C /* BlinkingCursor.json in Resources */ = {isa = PBXBuildFile; fileRef = 65565A672110B1F2001E6B3C /* BlinkingCursor.json */; };
 		65565A6A2110B723001E6B3C /* TwitterHeart.json in Resources */ = {isa = PBXBuildFile; fileRef = 65565A692110B723001E6B3C /* TwitterHeart.json */; };
+		6562D182218D93D2002AD869 /* BAORxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6562D181218D93D2002AD869 /* BAORxSwiftViewController.swift */; };
 		65791D10210772C600B307CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D0F210772C600B307CF /* AppDelegate.m */; };
 		65791D13210772C600B307CF /* BAOBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D12210772C600B307CF /* BAOBaseViewController.m */; };
 		65791D16210772C600B307CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65791D14210772C600B307CF /* Main.storyboard */; };
@@ -89,6 +90,8 @@
 		65565A632110A950001E6B3C /* BAOAnimationLottieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOAnimationLottieViewController.m; sourceTree = "<group>"; };
 		65565A672110B1F2001E6B3C /* BlinkingCursor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BlinkingCursor.json; sourceTree = "<group>"; };
 		65565A692110B723001E6B3C /* TwitterHeart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TwitterHeart.json; sourceTree = "<group>"; };
+		6562D180218D93D1002AD869 /* BAOStudy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BAOStudy-Bridging-Header.h"; sourceTree = "<group>"; };
+		6562D181218D93D2002AD869 /* BAORxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAORxSwiftViewController.swift; sourceTree = "<group>"; };
 		65791D0B210772C600B307CF /* BAOStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAOStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65791D0E210772C600B307CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65791D0F210772C600B307CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -228,6 +231,14 @@
 			path = LottieJSON;
 			sourceTree = "<group>";
 		};
+		6562D17F218D93A4002AD869 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				6562D181218D93D2002AD869 /* BAORxSwiftViewController.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
 		65791D02210772C600B307CF = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +278,7 @@
 				65791D19210772C800B307CF /* LaunchScreen.storyboard */,
 				65791D1C210772C800B307CF /* Info.plist */,
 				65791D1D210772C800B307CF /* main.m */,
+				6562D180218D93D1002AD869 /* BAOStudy-Bridging-Header.h */,
 				65FEE13721077CCF00303CA9 /* BAOStudy-Prefix.pch */,
 			);
 			path = BAOStudy;
@@ -421,6 +433,7 @@
 		65A838F32108DB8100CC49D7 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				6562D17F218D93A4002AD869 /* RxSwift */,
 				65565A5B21109EB8001E6B3C /* Animations */,
 				65E3487F210E1FAF00FCD7CC /* AR */,
 				65E34871210DFF1C00FCD7CC /* BAODiscoveryViewController.h */,
@@ -590,6 +603,7 @@
 				TargetAttributes = {
 					65791D0A210772C600B307CF = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					65791D22210772C800B307CF = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -737,6 +751,7 @@
 				65FEE11B21077A9C00303CA9 /* BAOCollectionCellViewModel.m in Sources */,
 				65FEE12A21077BA800303CA9 /* BAOTableSectionFooterViewModel.m in Sources */,
 				65E3487E210E1B1700FCD7CC /* BAODiscoveryEntryCellViewModel.m in Sources */,
+				6562D182218D93D2002AD869 /* BAORxSwiftViewController.swift in Sources */,
 				65791D1E210772C800B307CF /* main.m in Sources */,
 				65A838E92108D62100CC49D7 /* BAORootViewController.m in Sources */,
 				65791D4B2107781D00B307CF /* BAOTableView.m in Sources */,
@@ -935,6 +950,7 @@
 			baseConfigurationReference = 3E0A79695F7931E9E897213F /* Pods-BAOStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -946,6 +962,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.BAOStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BAOStudy/BAOStudy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -955,6 +974,7 @@
 			baseConfigurationReference = 3A70E803827C27B51AE3471F /* Pods-BAOStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -966,6 +986,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.BAOStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BAOStudy/BAOStudy-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -974,6 +996,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5094C7698200AC27C98B0DF8 /* Pods-BAOStudyTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
@@ -994,6 +1017,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10C244FB4B8CF41C0418B2FE /* Pods-BAOStudyTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
@@ -1014,6 +1038,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A7AF6B48F690FED78F17807 /* Pods-BAOStudyUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
 				INFOPLIST_FILE = BAOStudyUITests/Info.plist;
@@ -1033,6 +1058,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61C959A1E0A71C2AC3C43C70 /* Pods-BAOStudyUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
 				INFOPLIST_FILE = BAOStudyUITests/Info.plist;
