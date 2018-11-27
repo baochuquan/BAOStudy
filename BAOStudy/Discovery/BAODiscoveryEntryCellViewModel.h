@@ -11,8 +11,11 @@
 static const NSInteger CellAugmentedReality = 0;
 static const NSInteger CellAnimation = 1;
 static const NSInteger CellRxSwift = 2;
+static const NSInteger CellRuntime = 3;
+static const NSInteger CellGCD = 4;
 
-static const NSInteger CellAnimationLottie = 11;
+static const NSInteger CellAnimationLottie = 1001;
+static const NSInteger CellRuntimeVar = 3001;
 
 @interface BAODiscoveryEntryCellViewModel : BAOTableCellViewModel
 
@@ -21,5 +24,6 @@ static const NSInteger CellAnimationLottie = 11;
 
 + (NSArray<BAODiscoveryEntryCellViewModel *> *)discoveryViewModels;
 + (NSArray<BAODiscoveryEntryCellViewModel *> *)animationViewModels;
++ (NSArray<BAODiscoveryEntryCellViewModel *> *)runtimeViewModels;
 
 @end

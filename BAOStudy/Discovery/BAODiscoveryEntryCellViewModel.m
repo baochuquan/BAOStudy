@@ -32,6 +32,18 @@
     rxSwiftViewModel.cellId = CellRxSwift;
     [viewModels addObject:rxSwiftViewModel];
 
+    BAODiscoveryEntryCellViewModel *runtimeViewModel = [[BAODiscoveryEntryCellViewModel alloc] init];
+    runtimeViewModel.title = @"运行时";
+    runtimeViewModel.descr = @"BAORuntimeListViewController";
+    runtimeViewModel.cellId = CellRuntime;
+    [viewModels addObject:runtimeViewModel];
+
+    BAODiscoveryEntryCellViewModel *gcdViewModel = [[BAODiscoveryEntryCellViewModel alloc] init];
+    gcdViewModel.title = @"GCD";
+    gcdViewModel.descr = @"BAOGCDViewController";
+    gcdViewModel.cellId = CellGCD;
+    [viewModels addObject:gcdViewModel];
+
     return [viewModels copy];
 }
 
@@ -43,6 +55,18 @@
     arViewModel.descr = @"BAOAnimationLottieViewController";
     arViewModel.cellId = CellAnimationLottie;
     [viewModels addObject:arViewModel];
+
+    return [viewModels copy];
+}
+
++ (NSArray<BAODiscoveryEntryCellViewModel *> *)runtimeViewModels {
+    NSMutableArray<BAODiscoveryEntryCellViewModel *> *viewModels = [NSMutableArray array];
+
+    BAODiscoveryEntryCellViewModel *varViewModel = [[BAODiscoveryEntryCellViewModel alloc] init];
+    varViewModel.title = @"Var";
+    varViewModel.descr = @"BAOAnimationVarViewController";
+    varViewModel.cellId = CellRuntimeVar;
+    [viewModels addObject:varViewModel];
 
     return [viewModels copy];
 }

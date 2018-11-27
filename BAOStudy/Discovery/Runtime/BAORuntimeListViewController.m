@@ -1,30 +1,25 @@
 //
-//  BAODiscoveryViewController.m
+//  BAORuntimeListViewController.m
 //  BAOStudy
 //
-//  Created by baochuquan on 2018/7/29.
-//  Copyright © 2018年 Big Nerd Ranch. All rights reserved.
+//  Created by baochuquan on 2018/11/20.
+//  Copyright © 2018 Big Nerd Ranch. All rights reserved.
 //
 
-#import "BAODiscoveryViewController.h"
-#import "BAOTableView.h"
-#import "BAOTableViewModel.h"
-#import "BAODiscoveryEntryCell.h"
-#import "BAODiscoveryEntryCellViewModel.h"
-#import "BAOAugmentedRealityListViewController.h"
-#import "BAOAnimationListViewController.h"
 #import "BAORuntimeListViewController.h"
-#import "BAOGCDViewController.h"
-#import "BAOStudy-Swift.h"
+#import "BAOTableViewModel.h"
+#import "BAOTableViewCell.h"
+#import "BAODiscoveryEntryCellViewModel.h"
+#import "BAORuntimeVarViewController.h"
 
-@interface BAODiscoveryViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface BAORuntimeListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) BAOTableViewModel *viewModel;
 
 @end
 
-@implementation BAODiscoveryViewController
+@implementation BAORuntimeListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,7 +36,7 @@
     section.sectionId = 0;
     [self.viewModel.sectionViewModels addObject:section];
 
-    section.cellViewModels = [[BAODiscoveryEntryCellViewModel discoveryViewModels] mutableCopy];
+    section.cellViewModels = [[BAODiscoveryEntryCellViewModel runtimeViewModels] mutableCopy];
 }
 
 - (void)setupSubviews {
@@ -50,8 +45,7 @@
 }
 
 - (void)setupHeaderView {
-    self.headerView.title = @"发现";
-    [self.headerView removeLeftButton];
+    self.headerView.title = @"成员变量与属性";
 }
 
 - (void)setupTableView {
@@ -92,20 +86,8 @@
     BAOTableCellViewModel *cellVM = [self.viewModel cellViewModelWithIndexPath:indexPath];
     UIViewController *vc = nil;
     switch (cellVM.cellId) {
-        case CellAugmentedReality:
-            vc = [[BAOAugmentedRealityListViewController alloc] init];
-            break;
-        case CellAnimation:
-            vc = [[BAOAnimationListViewController alloc] init];
-            break;
-        case CellRxSwift:
-            vc = [[BAORxSwiftViewController alloc] init];
-            break;
-        case CellRuntime:
-            vc = [[BAORuntimeListViewController alloc] init];
-            break;
-        case CellGCD:
-            vc = [[BAOGCDViewController alloc] init];
+        case CellRuntimeVar:
+            vc = [[BAORuntimeVarViewController alloc] init];
             break;
         default:
             break;

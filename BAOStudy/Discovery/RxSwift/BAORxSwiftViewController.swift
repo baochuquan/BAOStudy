@@ -9,7 +9,7 @@
 import UIKit
 
 @objc(BAORxSwiftViewController)
-class BAORxSwiftViewController: UIViewController {
+class BAORxSwiftViewController: BAOBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
