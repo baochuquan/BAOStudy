@@ -15,6 +15,7 @@
 #import "BAOAnimationListViewController.h"
 #import "BAORuntimeListViewController.h"
 #import "BAOGCDViewController.h"
+#import "BAOKVOViewController.h"
 #import "BAOStudy-Swift.h"
 
 @interface BAODiscoveryViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -106,6 +107,9 @@
             break;
         case CellGCD:
             vc = [[BAOGCDViewController alloc] init];
+            break;
+        case CellKVO:
+            vc = [[BAOKVOViewController alloc] init];
             break;
         default:
             break;

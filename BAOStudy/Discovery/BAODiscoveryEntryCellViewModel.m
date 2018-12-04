@@ -44,6 +44,12 @@
     gcdViewModel.cellId = CellGCD;
     [viewModels addObject:gcdViewModel];
 
+    BAODiscoveryEntryCellViewModel *kvoViewModel = [[BAODiscoveryEntryCellViewModel alloc] init];
+    kvoViewModel.title = @"KVO";
+    kvoViewModel.descr = @"BAOKVOViewController";
+    kvoViewModel.cellId = CellKVO;
+    [viewModels addObject:kvoViewModel];
+
     return [viewModels copy];
 }
 
