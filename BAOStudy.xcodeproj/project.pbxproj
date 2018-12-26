@@ -33,6 +33,7 @@
 		65791D57210778E200B307CF /* BAOTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D56210778E200B307CF /* BAOTableFooterView.m */; };
 		65791D5B2107796900B307CF /* BAOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D5A2107796900B307CF /* BAOCollectionViewCell.m */; };
 		65791D5E210779B600B307CF /* BAOCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65791D5D210779B600B307CF /* BAOCollectionReusableView.m */; };
+		6593D7F721CBD8FC002CEC9A /* BAOFunctionalSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6593D7F621CBD8FC002CEC9A /* BAOFunctionalSwiftViewController.swift */; };
 		65A0F84F21B6202800F0871A /* BAOKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A0F84E21B6202800F0871A /* BAOKVOViewController.m */; };
 		65A838DB2108C0F500CC49D7 /* BAOHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838DA2108C0F500CC49D7 /* BAOHeaderView.m */; };
 		65A838E12108D1EF00CC49D7 /* BAOViewControllerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838E02108D1EF00CC49D7 /* BAOViewControllerUtils.m */; };
@@ -135,6 +136,7 @@
 		65791D5A2107796900B307CF /* BAOCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionViewCell.m; sourceTree = "<group>"; };
 		65791D5C210779B600B307CF /* BAOCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCollectionReusableView.h; sourceTree = "<group>"; };
 		65791D5D210779B600B307CF /* BAOCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOCollectionReusableView.m; sourceTree = "<group>"; };
+		6593D7F621CBD8FC002CEC9A /* BAOFunctionalSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAOFunctionalSwiftViewController.swift; sourceTree = "<group>"; };
 		65A0F84D21B6202800F0871A /* BAOKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOKVOViewController.h; sourceTree = "<group>"; };
 		65A0F84E21B6202800F0871A /* BAOKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOKVOViewController.m; sourceTree = "<group>"; };
 		65A838D92108C0F500CC49D7 /* BAOHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOHeaderView.h; sourceTree = "<group>"; };
@@ -390,6 +392,14 @@
 			path = BAOCollectionView;
 			sourceTree = "<group>";
 		};
+		6593D7F521CBD8DD002CEC9A /* FunctionalSwift */ = {
+			isa = PBXGroup;
+			children = (
+				6593D7F621CBD8FC002CEC9A /* BAOFunctionalSwiftViewController.swift */,
+			);
+			path = FunctionalSwift;
+			sourceTree = "<group>";
+		};
 		65A0F84C21B61F8100F0871A /* KVO */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +480,7 @@
 		65A838F32108DB8100CC49D7 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				6593D7F521CBD8DD002CEC9A /* FunctionalSwift */,
 				65A0F84C21B61F8100F0871A /* KVO */,
 				65F0113B21ACF1F70093C50D /* GCD */,
 				651CB1F921A3AD4800CE9229 /* Runtime */,
@@ -830,6 +841,7 @@
 				65FEE13021077C0300303CA9 /* BAOTableHeaderViewModel.m in Sources */,
 				65791D4E2107785900B307CF /* BAOTableHeaderView.m in Sources */,
 				65791D54210778B400B307CF /* BAOTableSectionFooterView.m in Sources */,
+				6593D7F721CBD8FC002CEC9A /* BAOFunctionalSwiftViewController.swift in Sources */,
 				65A838EC2108D74200CC49D7 /* BAOTabBarController.m in Sources */,
 				65FEE12721077B9200303CA9 /* BAOTableSectionHeaderViewModel.m in Sources */,
 				65FEE12121077ADC00303CA9 /* BAOCollectionSectionViewModel.m in Sources */,
