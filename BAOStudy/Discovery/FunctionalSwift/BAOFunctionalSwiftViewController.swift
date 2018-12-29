@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 let _A_ = true
 let _B_ = true
@@ -244,6 +245,290 @@ struct Address {
 
 /// --------------------------------------------------------------------------------------------------------------------
 
+
+func empty<Element>() -> [Element] {
+    return []
+}
+
+func isEmpty<Element>(set:[Element]) -> Bool {
+    return set.isEmpty
+}
+
+func contains<Element: Equatable>(_ x: Element, _ set: [Element]) -> Bool {
+    return set.contains(x)
+}
+
+func insert<Element: Equatable>(x: Element, _ set: [Element]) -> [Element] {
+    return contains(x, set) ? set : [x] + set
+}
+
+indirect enum BinarySearchTree<Element: Comparable> {
+    case Leaf
+    case Node(BinarySearchTree<Element>, Element, BinarySearchTree<Element>)
+}
+
+extension BinarySearchTree {
+    init() {
+        self = .Leaf
+    }
+
+    init(_ value: Element) {
+        self = .Node(.Leaf, value, .Leaf)
+    }
+
+    var count: Int {
+        switch self {
+        case .Leaf:
+            return 0
+        case let .Node(left, _, right):
+            return 1 + left.count + right.count
+        }
+    }
+
+    var elements: [Element] {
+        switch self {
+        case .Leaf:
+            return []
+        case let .Node(left, x, right):
+            return left.elements + [x] + right.elements
+        }
+    }
+
+    var isEmpty: Bool {
+        if case .Leaf = self {
+            return true
+        }
+        return false
+    }
+
+    var isBST: Bool {
+        switch self {
+        case .Leaf:
+            return true
+        case let .Node(left, x, right):
+            return left.elements.allSatisfy { y in y < x } && right.elements.allSatisfy { y in y > x } && left.isBST && right.isBST
+        }
+    }
+
+    func contains(_ x: Element) -> Bool {
+        switch self {
+        case .Leaf:
+            return false
+        case let .Node(_, y, _) where x == y:
+            return true
+        case let .Node(left, y, _) where x < y:
+            return left.contains(x)
+        case let .Node(_, y, right) where x > y:
+            return right.contains(x)
+        default:
+            fatalError("The impossible occurred")
+        }
+    }
+
+    mutating func insert(_ x: Element) {
+        switch self {
+        case .Leaf:
+            self = BinarySearchTree(x)
+        case .Node(var left, let y, var right):
+            if x < y { left.insert(x) }
+            if x > y { right.insert(x) }
+            self = .Node(left, y, right)
+        }
+    }
+}
+
+/// --------------------------------------------------------------------------------------------------------------------
+
+extension Array {
+    var decompose: (Element, [Element])? {
+        return isEmpty ? nil : (self[startIndex], Array(self.dropFirst()))
+    }
+}
+
+struct Trie<Element: Hashable> {
+    let isElement: Bool
+    let children: [Element: Trie<Element>]
+}
+
+extension Trie {
+    init() {
+        isElement = false
+        children = [:]
+    }
+
+    init(_ key: [Element]) {
+        if let (head, tail) = key.decompose {
+            let children = [head: Trie(tail)]
+            self = Trie(isElement: false, children: children)
+        } else {
+            self = Trie(isElement: true, children: [:])
+        }
+    }
+
+    var elements: [[Element]] {
+        var result: [[Element]] = isElement ? [[]] : []
+        for (key, value) in children {
+            result += value.elements.map { [key] + $0 }
+        }
+        return result
+    }
+
+    func lookup(_ key: [Element]) -> Bool {
+        guard let (head, tail) = key.decompose else {
+            return isElement
+        }
+        guard let subtrie = children[head] else {
+            return false
+        }
+        return subtrie.lookup(tail)
+    }
+
+    func withPrefix(_ prefix: [Element]) -> Trie<Element>? {
+        guard let (head, tail) = prefix.decompose else {
+            return self
+        }
+        guard let remainder = children[head] else {
+            return nil
+        }
+        return remainder.withPrefix(tail)
+    }
+
+    func autocomplete(_ key: [Element]) -> [[Element]] {
+        guard let trie = withPrefix(key) else {
+            return []
+        }
+        return trie.elements
+    }
+
+    func insert(_ key: [Element]) -> Trie<Element> {
+        guard let (head, tail) = key.decompose else {
+            return Trie(isElement: true, children: children)
+        }
+        var newChildren = children
+        if let nextTrie = children[head] {
+            newChildren[head] = nextTrie.insert(tail)
+        } else {
+            newChildren[head] = Trie(tail)
+        }
+        return Trie(isElement: isElement, children: newChildren)
+    }
+
+}
+
+/// --------------------------------------------------------------------------------------------------------------------
+
+enum Primitive {            // 描述三种类型的元素：椭圆、矩形、文字
+    case Ellipse
+    case Rectangle
+    case Text(String)
+}
+
+enum Attribute {            // 描述图表各类样式属性的数据结构
+    case FillColor(UIColor)
+}
+
+indirect enum Diagram {
+    case Primitive(CGSize, Primitive)       // 一个具有确定尺寸图形
+    case Beside(Diagram, Diagram)           // 一对水平对齐的图表
+    case Below(Diagram, Diagram)            // 一对垂直对齐的图表
+    case Attributed(Attribute, Diagram)     // 一个带有样式的图表
+    case Align(CGVector, Diagram)           // 用于描述对齐方式
+}
+
+extension Diagram {
+    var size: CGSize {
+        switch self {
+        case .Primitive(let size, _):
+            return size
+        case .Attributed(_, let x):
+            return x.size
+        case .Beside(let l, let r):
+            let sizeL = l.size
+            let sizeR = r.size
+            return CGSize(width: sizeL.width + sizeR.width, height: max(sizeL.height, sizeR.height))
+        case .Below(let t, let b):
+            let sizeT = t.size
+            let sizeB = b.size
+            return CGSize(width: max(sizeT.width, sizeB.width), height: sizeT.height + sizeB.height)
+        case .Align(_, let d):
+            return d.size
+        }
+    }
+}
+
+func *(l: CGFloat, r: CGSize) -> CGSize {
+    return CGSize(width: l * r.width, height: l * r.height)
+}
+
+func /(l: CGSize, r: CGSize) -> CGSize {
+    return CGSize(width: l.width / r.width, height: l.height / r.height)
+}
+
+func *(l: CGSize, r: CGSize) -> CGSize {
+    return CGSize(width: l.width * r.width, height: l.height * r.height)
+}
+
+func -(l: CGSize, r: CGSize) -> CGSize {
+    return CGSize(width: l.width - r.width, height: l.height - r.height)
+}
+
+func -(l: CGPoint, r: CGPoint) -> CGPoint {
+    return CGPoint(x: l.x - r.x, y: l.y - r.y)
+}
+
+extension CGVector {
+    var point: CGPoint { return CGPoint(x: dx, y: dy) }
+    var size: CGSize { return CGSize(width: dx, height: dy) }
+}
+
+extension CGSize {
+    var point: CGPoint {
+        return CGPoint(x: self.width, y: self.height)
+    }
+
+    func fit(vector: CGVector, _ rect: CGRect) -> CGRect {
+        let scaleSize = rect.size / self
+        let scale = min(scaleSize.width, scaleSize.height)
+        let size = scale * self
+        let space = vector.size * (size - rect.size)
+        return CGRect(origin: rect.origin - space.point, size: size)
+    }
+}
+
+
+//extension Sequence where Iterator.Element == CGFloat {
+//    func normalize() -> [CGFloat] {
+//        let maxVal = self.reduce(0) {  }
+//        return self.map { $0 / maxVal }
+//    }
+//}
+
+
+
+//func barGraph(input: [(String, Double)]) -> Diagram {
+//    let values: [CGFloat] = input.map { CGFloat($0.1) }
+//    let nValues = values.normalize()
+//    let bars = hcat(nValues.map { (x: CGFloat) -> Diagram in
+//        return rect(width: 1, height: 3 * x).fill(.blackColor()).alignBottom()
+//    })
+//    let labels = hcat(input.map { x in
+//        return text(x.0, width: 1, height: 0.3).alignTop()
+//    })
+//    return bars --- labels
+//}
+
+/// --------------------------------------------------------------------------------------------------------------------
+
+//func pure<A>(value: A) -> Region<A> {
+//    return Region { pos in value }
+//}
+//
+//func <*><A, B>(regionF: Region<A -> B>, regionX: Region<A>) -> Region<B> {
+//    return Region { pos in regionF.value(pos)(regionX.value(pos)) }
+//}
+
+/// --------------------------------------------------------------------------------------------------------------------
+
 @objc(BAOFunctionalSwiftViewController)
 class BAOFunctionalSwiftViewController: BAOBaseViewController {
 
@@ -301,5 +586,26 @@ class BAOFunctionalSwiftViewController: BAOBaseViewController {
             print("This order will be shipped to \(myState)")
         }
 
+        // 添加泛型
+        let capitals = [
+            "France": "Paris",
+            "Spain": "Madrid",
+            "The Netherlands": "Amsterdam",
+            "Belgium": "Brussels"
+        ]
+        let mayors = [
+            "Paris": "Hidalgo",
+            "Madrid": "Carmena",
+            "Amsterdam": "Van der Laan",
+            "Berlin": "Muller"
+        ]
+
+        func mayorOfCapital(country: String) -> String? {
+            return capitals[country].flatMap { mayors[$0] }
+        }
+
+        //
+        let leaf: BinarySearchTree<Int> = .Leaf
+        let five: BinarySearchTree<Int> = .Node(leaf, 5, leaf)
     }
 }
