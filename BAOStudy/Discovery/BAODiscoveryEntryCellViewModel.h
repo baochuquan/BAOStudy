@@ -14,6 +14,8 @@ static const NSInteger CellRxSwift = 2;
 static const NSInteger CellRuntime = 3;
 static const NSInteger CellGCD = 4;
 static const NSInteger CellKVO = 5;
+static const NSInteger CellAdvancedSwift = 6;
+static const NSInteger CellAlgorithm = 7;
 
 static const NSInteger CellAnimationLottie = 1001;
 static const NSInteger CellRuntimeVar = 3001;

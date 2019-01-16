@@ -111,6 +111,12 @@
         case CellKVO:
             vc = [[BAOKVOViewController alloc] init];
             break;
+        case CellAdvancedSwift:
+            vc = [[BAOAdvancedSwiftViewController alloc] init];
+            break;
+        case CellAlgorithm:
+            vc = [[BAOAlgorithmViewController alloc] init];
+            break;
         default:
             break;
     }

@@ -11,6 +11,8 @@
 		651CB1FC21A3AD9B00CE9229 /* BAORuntimeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CB1FB21A3AD9B00CE9229 /* BAORuntimeListViewController.m */; };
 		651CB1FF21A3B15800CE9229 /* BAORuntimeVarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CB1FE21A3B15800CE9229 /* BAORuntimeVarViewController.m */; };
 		651CB20221A3B6C300CE9229 /* BAORuntimeVarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 651CB20121A3B6C300CE9229 /* BAORuntimeVarModel.m */; };
+		6524352421EF6A6A00480F8B /* BAOAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524352321EF6A6A00480F8B /* BAOAlgorithmViewController.swift */; };
+		6535DB6E21EE21D400237F08 /* BAOAdvancedSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6535DB6D21EE21D400237F08 /* BAOAdvancedSwiftViewController.swift */; };
 		65565A5E21109F24001E6B3C /* BAOAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A5D21109F24001E6B3C /* BAOAnimationListViewController.m */; };
 		65565A612110A08E001E6B3C /* BAOAugmentedRealityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A602110A08E001E6B3C /* BAOAugmentedRealityListViewController.m */; };
 		65565A642110A950001E6B3C /* BAOAnimationLottieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65565A632110A950001E6B3C /* BAOAnimationLottieViewController.m */; };
@@ -94,6 +96,8 @@
 		651CB20021A3B6C300CE9229 /* BAORuntimeVarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAORuntimeVarModel.h; sourceTree = "<group>"; };
 		651CB20121A3B6C300CE9229 /* BAORuntimeVarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAORuntimeVarModel.m; sourceTree = "<group>"; };
 		651CCF262107879000945A60 /* BAOCommonEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOCommonEnums.h; sourceTree = "<group>"; };
+		6524352321EF6A6A00480F8B /* BAOAlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAOAlgorithmViewController.swift; sourceTree = "<group>"; };
+		6535DB6D21EE21D400237F08 /* BAOAdvancedSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAOAdvancedSwiftViewController.swift; sourceTree = "<group>"; };
 		65565A5C21109F24001E6B3C /* BAOAnimationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOAnimationListViewController.h; sourceTree = "<group>"; };
 		65565A5D21109F24001E6B3C /* BAOAnimationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOAnimationListViewController.m; sourceTree = "<group>"; };
 		65565A5F2110A08E001E6B3C /* BAOAugmentedRealityListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOAugmentedRealityListViewController.h; sourceTree = "<group>"; };
@@ -231,6 +235,22 @@
 				651CB20121A3B6C300CE9229 /* BAORuntimeVarModel.m */,
 			);
 			path = Runtime;
+			sourceTree = "<group>";
+		};
+		6524352221EF6A4A00480F8B /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				6524352321EF6A6A00480F8B /* BAOAlgorithmViewController.swift */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		6535DB6C21EE217F00237F08 /* AdvancedSwift */ = {
+			isa = PBXGroup;
+			children = (
+				6535DB6D21EE21D400237F08 /* BAOAdvancedSwiftViewController.swift */,
+			);
+			path = AdvancedSwift;
 			sourceTree = "<group>";
 		};
 		65565A5B21109EB8001E6B3C /* Animations */ = {
@@ -480,6 +500,8 @@
 		65A838F32108DB8100CC49D7 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				6524352221EF6A4A00480F8B /* Algorithm */,
+				6535DB6C21EE217F00237F08 /* AdvancedSwift */,
 				6593D7F521CBD8DD002CEC9A /* FunctionalSwift */,
 				65A0F84C21B61F8100F0871A /* KVO */,
 				65F0113B21ACF1F70093C50D /* GCD */,
@@ -843,10 +865,12 @@
 				65791D54210778B400B307CF /* BAOTableSectionFooterView.m in Sources */,
 				6593D7F721CBD8FC002CEC9A /* BAOFunctionalSwiftViewController.swift in Sources */,
 				65A838EC2108D74200CC49D7 /* BAOTabBarController.m in Sources */,
+				6524352421EF6A6A00480F8B /* BAOAlgorithmViewController.swift in Sources */,
 				65FEE12721077B9200303CA9 /* BAOTableSectionHeaderViewModel.m in Sources */,
 				65FEE12121077ADC00303CA9 /* BAOCollectionSectionViewModel.m in Sources */,
 				65565A642110A950001E6B3C /* BAOAnimationLottieViewController.m in Sources */,
 				651CB20221A3B6C300CE9229 /* BAORuntimeVarModel.m in Sources */,
+				6535DB6E21EE21D400237F08 /* BAOAdvancedSwiftViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

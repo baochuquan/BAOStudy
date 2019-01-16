@@ -32,6 +32,18 @@
     rxSwiftViewModel.cellId = CellRxSwift;
     [viewModels addObject:rxSwiftViewModel];
 
+    BAODiscoveryEntryCellViewModel *advancedSwiftViewModel = [[BAODiscoveryEntryCellViewModel alloc] init];
+    advancedSwiftViewModel.title = @"AdvancedSwift";
+    advancedSwiftViewModel.descr = @"BAOAdvancedSwiftViewController";
+    advancedSwiftViewModel.cellId = CellAdvancedSwift;
+    [viewModels addObject:advancedSwiftViewModel];
+
+    BAODiscoveryEntryCellViewModel *algorithmViewModel = [[BAODiscoveryEntryCellViewModel alloc] init];
+    algorithmViewModel.title = @"Algorithm";
+    algorithmViewModel.descr = @"BAOAlgorithmViewController";
+    algorithmViewModel.cellId = CellAlgorithm;
+    [viewModels addObject:algorithmViewModel];
+
     BAODiscoveryEntryCellViewModel *runtimeViewModel = [[BAODiscoveryEntryCellViewModel alloc] init];
     runtimeViewModel.title = @"运行时";
     runtimeViewModel.descr = @"BAORuntimeListViewController";
