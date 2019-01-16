@@ -8,13 +8,80 @@
 
 import Foundation
 
-class ListNode {
-    var val: Int
+class ListNode<T> {
+    var val: T
     var next: ListNode?
-    init(_ val: Int) {
+    init(_ val: T) {
         self.val = val
         self.next = nil
     }
+
+    // 返回一个链表中奇数位和偶数位节点构成的链表
+    // O(n)
+    func oddAndEvenList() -> (ListNode?, ListNode?) {
+        let oddHead = ListNode(val)
+        let evenHead = ListNode(val)
+        var oddTail: ListNode? = oddHead
+        var evenTail: ListNode? = evenHead
+
+        var listPtr: ListNode? = self, isOdd = false
+        while listPtr != nil {
+            if isOdd {
+                oddTail?.next = listPtr?.subList([0])
+//                oddTail?.next = listPtr?.node(of: 0)
+//                oddTail?.next = ListNode(listPtr!.val)
+                oddTail = oddTail?.next
+            } else {
+                evenTail?.next = listPtr?.subList([0])
+//                evenTail?.next = listPtr?.node(of: 0)
+//                evenTail?.next = ListNode(listPtr!.val)
+                evenTail = evenTail?.next
+            }
+            isOdd = !isOdd
+            listPtr = listPtr?.next
+        }
+        return (oddHead.next, evenHead.next)
+    }
+
+    // 返回以 head 开始的链表中指定索引的节点构成的子链表
+    func subList(_ indices: [Int]) -> ListNode? {
+        let listHead = ListNode(val)
+        var listTail: ListNode? = listHead
+
+        var i = 0
+        while i < indices.count {
+            guard let node = self.node(of: indices[i]) else { return listHead.next}
+            i += 1
+            listTail?.next = node
+            listTail = listTail?.next
+        }
+
+        return listHead.next
+    }
+
+    // 返回以 head 开始的链表中第 index 个节点
+    func node(of index: Int) -> ListNode? {
+        var i = 0, listPtr: ListNode? = self
+        while listPtr != nil && i <= index {
+            if i == index {
+                return ListNode(listPtr!.val)
+            }
+            i += 1
+            listPtr = listPtr?.next
+        }
+        return nil
+    }
+
+    // 打印链表
+    func printList() {
+        var listPtr: ListNode? = self
+        while listPtr != nil {
+            print("\(listPtr!.val)", terminator: " -> ")
+            listPtr = listPtr?.next
+        }
+        print("nil")
+    }
+
 }
 
 @objc(BAOAlgorithmViewController)
@@ -43,85 +110,11 @@ class BAOAlgorithmViewController: BAOBaseViewController {
         node7.next = node8
         node8.next = node9
 
-        let subNode = subList(node0, [0, 2, 4, 10, 2, 3, 1])
-        printList(subNode)
+        node0.subList([3, 2, 4, 10, 2, 3, 1])?.printList()
 
-        let (oddList, evenList) = oddAndEvenList(node0)
-        printList(oddList)
-        printList(evenList)
-    }
-
-    // 返回一个链表中奇数位和偶数位节点构成的链表
-    func oddAndEvenList(_ head: ListNode?) -> (ListNode?, ListNode?) {
-        guard let head = head else {
-            return (nil, nil)
-        }
-
-        let oddHead = ListNode(-1)
-        let evenHead = ListNode(-1)
-        var oddTail: ListNode? = oddHead
-        var evenTail: ListNode? = evenHead
-
-        var listPtr: ListNode? = head, isOdd = true
-        while listPtr != nil {
-            if isOdd {
-                oddTail?.next = node(from: listPtr?.next, of: 0)
-                oddTail = oddTail?.next
-            } else {
-                evenTail?.next = node(from: listPtr?.next, of: 0)
-                evenTail = evenTail?.next
-            }
-            isOdd = !isOdd
-            listPtr = listPtr?.next
-        }
-        return (oddHead.next, evenHead.next)
-    }
-
-    // 返回以 head 开始的链表中指定索引的节点构成的子链表
-    func subList(_ head: ListNode?, _ indices: [Int]) -> ListNode? {
-        guard let _ = head else {
-            return nil
-        }
-
-        let listHead = ListNode(-1)
-        var listTail: ListNode? = listHead
-
-        var i = 0
-        while i < indices.count {
-            guard let node = node(from: head, of: indices[i]) else { return listHead.next}
-            i += 1
-            listTail?.next = node
-            listTail = listTail?.next
-        }
-
-        return listHead.next
-    }
-
-    // 返回以 head 开始的链表中第 index 个节点
-    func node(from head: ListNode?, of index: Int) -> ListNode? {
-        guard let head = head else { return nil }
-
-        var i = 0, listPtr: ListNode? = head
-        while listPtr != nil && i <= index {
-            if i == index {
-                return ListNode(listPtr!.val)
-            }
-            i += 1
-            listPtr = listPtr?.next
-        }
-        return nil
-    }
-
-    // 打印链表
-    func printList(_ head: ListNode?) {
-        guard let head = head else { return }
-
-        var listPtr: ListNode? = head
-        while listPtr != nil {
-            print("\(listPtr!.val)", terminator: " -> ")
-            listPtr = listPtr?.next
-        }
-        print("nil")
+        let (oddList, evenList) = node0.oddAndEvenList()
+        oddList?.printList()
+        evenList?.printList()
     }
 
 }
