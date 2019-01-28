@@ -44,6 +44,8 @@
 		65A838EC2108D74200CC49D7 /* BAOTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838EB2108D74200CC49D7 /* BAOTabBarController.m */; };
 		65A838F02108D97200CC49D7 /* BAOTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838EF2108D97200CC49D7 /* BAOTabBarItem.m */; };
 		65A838F72108DBB600CC49D7 /* BAOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838F62108DBB600CC49D7 /* BAOHomeViewController.m */; };
+		65AA9EBF21FF4CBA009D6533 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AA9EA021FF44CD009D6533 /* SnapKit.framework */; };
+		65AA9EC221FF51FC009D6533 /* BAOAdvancedSwiftCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA9EC121FF51FC009D6533 /* BAOAdvancedSwiftCollectionViewController.swift */; };
 		65E34873210DFF1C00FCD7CC /* BAODiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E34872210DFF1C00FCD7CC /* BAODiscoveryViewController.m */; };
 		65E34876210DFF3500FCD7CC /* BAOMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E34875210DFF3500FCD7CC /* BAOMeViewController.m */; };
 		65E3487B210E1AC600FCD7CC /* BAODiscoveryEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E3487A210E1AC600FCD7CC /* BAODiscoveryEntryCell.m */; };
@@ -158,6 +160,20 @@
 		65A838EF2108D97200CC49D7 /* BAOTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOTabBarItem.m; sourceTree = "<group>"; };
 		65A838F52108DBB600CC49D7 /* BAOHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOHomeViewController.h; sourceTree = "<group>"; };
 		65A838F62108DBB600CC49D7 /* BAOHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAOHomeViewController.m; sourceTree = "<group>"; };
+		65AA9EA021FF44CD009D6533 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		65AA9EA221FF44D2009D6533 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		65AA9EA421FF44D8009D6533 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		65AA9EA621FF44E0009D6533 /* RxDataSources.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxDataSources.framework.dSYM; path = Carthage/Build/iOS/RxDataSources.framework.dSYM; sourceTree = "<group>"; };
+		65AA9EA821FF44EA009D6533 /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
+		65AA9EAA21FF44EE009D6533 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		65AA9EAC21FF44F2009D6533 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		65AA9EAE21FF44F9009D6533 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
+		65AA9EB021FF44FC009D6533 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Differentiator.framework; path = Carthage/Build/iOS/Differentiator.framework; sourceTree = "<group>"; };
+		65AA9EB221FF44FF009D6533 /* Action.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Action.framework; path = Carthage/Build/iOS/Action.framework; sourceTree = "<group>"; };
+		65AA9EB421FF451C009D6533 /* RxGesture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxGesture.framework; path = Carthage/Build/iOS/RxGesture.framework; sourceTree = "<group>"; };
+		65AA9EB621FF4880009D6533 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
+		65AA9EBD21FF4C6A009D6533 /* SnapKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SnapKit.framework.dSYM; path = Carthage/Build/iOS/SnapKit.framework.dSYM; sourceTree = "<group>"; };
+		65AA9EC121FF51FC009D6533 /* BAOAdvancedSwiftCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAOAdvancedSwiftCollectionViewController.swift; sourceTree = "<group>"; };
 		65E34871210DFF1C00FCD7CC /* BAODiscoveryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAODiscoveryViewController.h; sourceTree = "<group>"; };
 		65E34872210DFF1C00FCD7CC /* BAODiscoveryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BAODiscoveryViewController.m; sourceTree = "<group>"; };
 		65E34874210DFF3500FCD7CC /* BAOMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BAOMeViewController.h; sourceTree = "<group>"; };
@@ -202,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				716E44C76259A16EF6B3E5C3 /* libPods-BAOStudy.a in Frameworks */,
+				65AA9EBF21FF4CBA009D6533 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				6535DB6D21EE21D400237F08 /* BAOAdvancedSwiftViewController.swift */,
+				65AA9EC121FF51FC009D6533 /* BAOAdvancedSwiftCollectionViewController.swift */,
 			);
 			path = AdvancedSwift;
 			sourceTree = "<group>";
@@ -607,6 +625,19 @@
 		E91C343AD00E34CE0865736C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65AA9EBD21FF4C6A009D6533 /* SnapKit.framework.dSYM */,
+				65AA9EB621FF4880009D6533 /* SnapKit.framework */,
+				65AA9EB421FF451C009D6533 /* RxGesture.framework */,
+				65AA9EB221FF44FF009D6533 /* Action.framework */,
+				65AA9EB021FF44FC009D6533 /* Differentiator.framework */,
+				65AA9EAE21FF44F9009D6533 /* RxAtomic.framework */,
+				65AA9EAC21FF44F2009D6533 /* RxBlocking.framework */,
+				65AA9EAA21FF44EE009D6533 /* RxCocoa.framework */,
+				65AA9EA821FF44EA009D6533 /* RxDataSources.framework */,
+				65AA9EA621FF44E0009D6533 /* RxDataSources.framework.dSYM */,
+				65AA9EA421FF44D8009D6533 /* RxTest.framework */,
+				65AA9EA221FF44D2009D6533 /* RxSwift.framework */,
+				65AA9EA021FF44CD009D6533 /* SnapKit.framework */,
 				FC30AB89E355F549325ED135 /* libPods-BAOStudy.a */,
 				795E64144B88B9467954EADC /* libPods-BAOStudyTests.a */,
 				12526DE7152FFA68D921BE6A /* libPods-BAOStudyUITests.a */,
@@ -626,6 +657,7 @@
 				65791D08210772C600B307CF /* Frameworks */,
 				65791D09210772C600B307CF /* Resources */,
 				9419C1E3B9FBDD73AD9417CB /* [CP] Copy Pods Resources */,
+				65AA9EC021FF4D06009D6533 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -765,6 +797,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		65AA9EC021FF4D06009D6533 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/Carthage copy-frameworks \n";
+		};
 		6E8EFECF6FCE17CC2D62AF6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -865,6 +915,7 @@
 				65791D54210778B400B307CF /* BAOTableSectionFooterView.m in Sources */,
 				6593D7F721CBD8FC002CEC9A /* BAOFunctionalSwiftViewController.swift in Sources */,
 				65A838EC2108D74200CC49D7 /* BAOTabBarController.m in Sources */,
+				65AA9EC221FF51FC009D6533 /* BAOAdvancedSwiftCollectionViewController.swift in Sources */,
 				6524352421EF6A6A00480F8B /* BAOAlgorithmViewController.swift in Sources */,
 				65FEE12721077B9200303CA9 /* BAOTableSectionHeaderViewModel.m in Sources */,
 				65FEE12121077ADC00303CA9 /* BAOCollectionSectionViewModel.m in Sources */,
@@ -1043,6 +1094,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BAOStudy/BAOStudy-Prefix.pch";
 				INFOPLIST_FILE = BAOStudy/Info.plist;
@@ -1067,6 +1123,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29QXUV376B;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BAOStudy/BAOStudy-Prefix.pch";
 				INFOPLIST_FILE = BAOStudy/Info.plist;

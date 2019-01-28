@@ -28,6 +28,8 @@ static const NSInteger CellAdvancedSwiftCollection = 6001;
 @property (nonatomic, strong) NSString *descr;
 
 + (NSArray<BAODiscoveryEntryCellViewModel *> *)discoveryViewModels;
+
++ (NSArray<BAODiscoveryEntryCellViewModel *> *)advancedSwiftViewModels;
 + (NSArray<BAODiscoveryEntryCellViewModel *> *)animationViewModels;
 + (NSArray<BAODiscoveryEntryCellViewModel *> *)runtimeViewModels;
 

@@ -6,8 +6,11 @@
 #define BAOStudy_Bridging_Header_h
 
 #import "BAOBaseViewController.h"
-
+#import "BAOCommonEnums.h"
 #import "BAOTableView.h"
 #import "BAOTableViewModel.h"
+
+#import "BAODiscoveryEntryCellViewModel.h"
+#import "BAODiscoveryEntryCell.h"
 
 #endif /* BAOStudy_Bridging_Header_h */
