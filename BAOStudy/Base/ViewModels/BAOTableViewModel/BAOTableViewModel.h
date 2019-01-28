@@ -10,6 +10,9 @@
 #import "BAOTableHeaderViewModel.h"
 #import "BAOTableFooterViewModel.h"
 #import "BAOTableSectionViewModel.h"
+#import "BAOTableSectionHeaderViewModel.h"
+#import "BAOTableSectionFooterViewModel.h"
+#import "BAOTableCellViewModel.h"
 
 @interface BAOTableViewModel : NSObject
 

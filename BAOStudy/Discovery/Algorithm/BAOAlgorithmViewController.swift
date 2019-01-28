@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Swift
 class ListNode<T> {
     var val: T
     var next: ListNode?
@@ -16,8 +17,43 @@ class ListNode<T> {
         self.next = nil
     }
 
+    // 时间复杂度 O(n)，空间复杂度 O(m)
+    func subLists(span: Int) -> [ListNode?] {
+        var heads: Array<ListNode?> = []
+        for _ in 0..<span {
+            heads.append(ListNode(val))
+        }
+        var tails: Array<ListNode?> = heads
+
+        var listPtr: ListNode? = self
+        var i = 0
+        while listPtr != nil {
+            tails[i % span]?.next = listPtr
+            tails[i % span] = tails[i % span]?.next
+            listPtr = listPtr?.next
+            i += 1
+        }
+        for i in 0..<span {
+            tails[i]?.next = nil
+        }
+        return heads.map({ (node) -> ListNode? in
+            node?.next
+        })
+    }
+
+    // 打印链表
+    func printList() {
+        var listPtr: ListNode? = self
+        while listPtr != nil {
+            print("\(listPtr!.val)", terminator: " -> ")
+            listPtr = listPtr?.next
+        }
+        print("nil")
+    }
+
+
     // 返回一个链表中奇数位和偶数位节点构成的链表
-    // O(n)
+    // 时间 O(n)，空间 O(n)
     func oddAndEvenList() -> (ListNode?, ListNode?) {
         let oddHead = ListNode(val)
         let evenHead = ListNode(val)
@@ -72,15 +108,7 @@ class ListNode<T> {
         return nil
     }
 
-    // 打印链表
-    func printList() {
-        var listPtr: ListNode? = self
-        while listPtr != nil {
-            print("\(listPtr!.val)", terminator: " -> ")
-            listPtr = listPtr?.next
-        }
-        print("nil")
-    }
+
 
 }
 
@@ -110,11 +138,43 @@ class BAOAlgorithmViewController: BAOBaseViewController {
         node7.next = node8
         node8.next = node9
 
-        node0.subList([3, 2, 4, 10, 2, 3, 1])?.printList()
+        let lists = node0.subLists(span: 2)
+        lists[0]?.printList()
+        lists[1]?.printList()
 
-        let (oddList, evenList) = node0.oddAndEvenList()
-        oddList?.printList()
-        evenList?.printList()
+//        node0.subList([3, 2, 4, 10, 2, 3, 1])?.printList()
+//
+//        let (oddList, evenList) = node0.oddAndEvenList()
+//        oddList?.printList()
+//        evenList?.printList()
+
     }
 
+}
+
+func test() {
+    let node0 = ListNode(0)
+    let node1 = ListNode(1)
+    let node2 = ListNode(2)
+    let node3 = ListNode(3)
+    let node4 = ListNode(4)
+    let node5 = ListNode(5)
+    let node6 = ListNode(6)
+    let node7 = ListNode(7)
+    let node8 = ListNode(8)
+    let node9 = ListNode(9)
+
+    node0.next = node1
+    node1.next = node2
+    node2.next = node3
+    node3.next = node4
+    node4.next = node5
+    node5.next = node6
+    node6.next = node7
+    node7.next = node8
+    node8.next = node9
+
+    let lists = node0.subLists(span: 2)
+    lists[0]?.printList()
+    lists[1]?.printList()
 }

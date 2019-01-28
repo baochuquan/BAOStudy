@@ -65,6 +65,18 @@
     return [viewModels copy];
 }
 
++ (NSArray<BAODiscoveryEntryCellViewModel *> *)advancedSwiftViewModels {
+    NSMutableArray<BAODiscoveryEntryCellViewModel *> *vms = [NSMutableArray array];
+
+    BAODiscoveryEntryCellViewModel *collectionViewModel = [[BAODiscoveryEntryCellViewModel alloc] init];
+    collectionViewModel.title = @"集合类型协议";
+    collectionViewModel.descr = @"BAOAdvancedSwiftCollectionViewController";
+    collectionViewModel.cellId = CellAdvancedSwiftCollection;
+    [vms addObject:collectionViewModel];
+
+    return [vms copy];
+}
+
 + (NSArray<BAODiscoveryEntryCellViewModel *> *)animationViewModels {
     NSMutableArray<BAODiscoveryEntryCellViewModel *> *viewModels = [NSMutableArray array];
 

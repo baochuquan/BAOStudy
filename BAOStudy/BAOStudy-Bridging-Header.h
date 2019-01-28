@@ -7,4 +7,7 @@
 
 #import "BAOBaseViewController.h"
 
+#import "BAOTableView.h"
+#import "BAOTableViewModel.h"
+
 #endif /* BAOStudy_Bridging_Header_h */

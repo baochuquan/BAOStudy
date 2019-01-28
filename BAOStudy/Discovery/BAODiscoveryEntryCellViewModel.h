@@ -20,6 +20,8 @@ static const NSInteger CellAlgorithm = 7;
 static const NSInteger CellAnimationLottie = 1001;
 static const NSInteger CellRuntimeVar = 3001;
 
+static const NSInteger CellAdvancedSwiftCollection = 6001;
+
 @interface BAODiscoveryEntryCellViewModel : BAOTableCellViewModel
 
 @property (nonatomic, strong) NSString *title;

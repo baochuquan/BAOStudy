@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BAOTableHeaderView.h"
+#import "BAOTableFooterView.h"
+#import "BAOTableSectionHeaderView.h"
+#import "BAOTableSectionFooterView.h"
+#import "BAOTableViewCell.h"
 
 @interface BAOTableView : UITableView
 
