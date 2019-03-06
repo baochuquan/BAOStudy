@@ -221,6 +221,40 @@ protocol Collection: Sequence {
 }
  */
 
+// 要让类型满足 Collection，至少需要声明：
+// - startIndex 和 endIndex 属性
+// - 至少能够读取类型中的元素的下标方法
+// - 用来在集合索引之间进行步进的 index(after:) 方法
+/*
+ protocol Collection: Sequence {
+    associatedtype Index: Comparable                // 一个表示集合中位置的类型
+    var startIndex: Index { get }                   // 一个非空集合中首个元素的位置
+    var endIndex: Index { get }                     // 集合中超过末位的位置——即比最后一个有效下标值大 1 的位置
+    func index(after i: Index) -> Index             // 返回在给定索引之后的那个索引值
+    subscript(position: Index) -> Element { get }   //
+}
+ */
+
+// 让 FIFOQueue 满足 Colleciton
+extension FIFOQueue: Collection {
+    public var startIndex: Int { return 0 }
+    public var endIndex: Int { return left.count + right.count }
+
+    public func index(after i: Int) -> Int {
+        precondition(i < endIndex)
+        return i + 1
+    }
+
+    public subscript(position: Int) -> Element {
+        precondition((0..<endIndex).contains(position), "Index out of bounds")
+        if position < left.endIndex {
+            return left[left.count - position - 1]
+        } else {
+            return right[position - left.count]
+        }
+    }
+}
+
 class BAOAdvancedSwiftCollectionViewController: BAOBaseViewController {
 
     override func viewDidLoad() {
@@ -310,6 +344,14 @@ class BAOAdvancedSwiftCollectionViewController: BAOBaseViewController {
         list.contains("2")
         list.flatMap { Int($0) }
         list.elementsEqual(["1", "2", "3"])
+
+        print("-------------------")
+        var q = FIFOQueue<String>()
+        for x in ["1", "2", "foo", "3"] {
+            q.enqueue(x)
+        }
+        for s in q {
+
     }
 
 }
