@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,7 +44,6 @@
 		65A838EC2108D74200CC49D7 /* BAOTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838EB2108D74200CC49D7 /* BAOTabBarController.m */; };
 		65A838F02108D97200CC49D7 /* BAOTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838EF2108D97200CC49D7 /* BAOTabBarItem.m */; };
 		65A838F72108DBB600CC49D7 /* BAOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A838F62108DBB600CC49D7 /* BAOHomeViewController.m */; };
-		65AA9EBF21FF4CBA009D6533 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AA9EA021FF44CD009D6533 /* SnapKit.framework */; };
 		65AA9EC221FF51FC009D6533 /* BAOAdvancedSwiftCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA9EC121FF51FC009D6533 /* BAOAdvancedSwiftCollectionViewController.swift */; };
 		65E34873210DFF1C00FCD7CC /* BAODiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E34872210DFF1C00FCD7CC /* BAODiscoveryViewController.m */; };
 		65E34876210DFF3500FCD7CC /* BAOMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E34875210DFF3500FCD7CC /* BAOMeViewController.m */; };
@@ -218,7 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				716E44C76259A16EF6B3E5C3 /* libPods-BAOStudy.a in Frameworks */,
-				65AA9EBF21FF4CBA009D6533 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,7 +803,6 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -838,17 +835,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BAOStudy/Pods-BAOStudy-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BAOStudy/Pods-BAOStudy-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BAOStudy/Pods-BAOStudy-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BAOStudy/Pods-BAOStudy-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BAOStudy/Pods-BAOStudy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E890CE3538711A70A51A79F6 /* [CP] Check Pods Manifest.lock */ = {
@@ -1031,6 +1027,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1082,6 +1079,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1098,6 +1096,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BAOStudy/BAOStudy-Prefix.pch";
@@ -1110,7 +1109,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BAOStudy/BAOStudy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1127,6 +1126,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BAOStudy/BAOStudy-Prefix.pch";
@@ -1138,7 +1138,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bignerdranch.BAOStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BAOStudy/BAOStudy-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

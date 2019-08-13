@@ -350,7 +350,6 @@ class BAOAdvancedSwiftCollectionViewController: BAOBaseViewController {
         for x in ["1", "2", "foo", "3"] {
             q.enqueue(x)
         }
-        for s in q {
 
     }
 
